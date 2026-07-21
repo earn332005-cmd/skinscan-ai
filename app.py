@@ -1,29 +1,16 @@
 import streamlit as st
 import pandas as pd
-from PIL import Image, ImageEnhance, ImageFilter
+from PIL import Image, ImageEnhance
 import pytesseract
 import re
 
 # ==========================================
-# 1. ตั้งค่าหน้าเพจ (ปรับเป็น Wide ให้กว้างขึ้น)
+# 1. ตั้งค่าหน้าเพจ 
 # ==========================================
 st.set_page_config(page_title="SkinScan AI", page_icon="woman_5362023.png", layout="wide")
 
 # ==========================================
-# 2. แถบเมนูด้านข้าง (Sidebar - วิธีใช้งาน)
-# ==========================================
-with st.sidebar:
-    st.header("💡 วิธีการใช้งาน")
-    st.markdown("""
-    1. **เตรียมสลาก:** พลิกหลังซอง/ขวดผลิตภัณฑ์
-    2. **ถ่ายรูป:** ถ่ายให้เห็นตัวอักษร Ingredients ชัดเจน
-    3. **อัปโหลด:** กดปุ่ม Browse files เพื่ออัปโหลดรูป
-    4. **รอผล:** AI จะแยกหมวดหมู่สารให้ทันที
-    """)
-    st.info("📌 **Tip:** หากตัวอักษรเล็กมาก กรุณาถ่ายในที่สว่าง หรือครอปรูปเฉพาะส่วนผสมก่อนอัปโหลด")
-
-# ==========================================
-# 3. โหลดฐานข้อมูล
+# 2. โหลดฐานข้อมูล
 # ==========================================
 @st.cache_data
 def load_data():
@@ -38,7 +25,7 @@ def load_data():
 df_db = load_data()
 
 # ==========================================
-# 4. ฟังก์ชันวิเคราะห์ส่วนผสม
+# 3. ฟังก์ชันวิเคราะห์ส่วนผสม
 # ==========================================
 def analyze_ingredients(extracted_text, df):
     text_clean = extracted_text.replace('\n', ' ')
@@ -58,9 +45,8 @@ def analyze_ingredients(extracted_text, df):
     return pd.DataFrame(found_ingredients)
 
 # ==========================================
-# 5. หน้าจอหลัก (UI)
+# 4. หน้าจอหลัก (UI)
 # ==========================================
-# --- เปลี่ยนไอคอนตรงหัวเว็บ ---
 col_icon, col_title = st.columns([1, 9])
 with col_icon:
     st.image("woman_5362023.png", width=65)
@@ -68,6 +54,9 @@ with col_title:
     st.title("SkinScan AI")
 
 st.markdown("**ระบบสแกนส่วนผสมเครื่องสำอางและสกินแคร์อัจฉริยะ**")
+
+# --- ย้ายวิธีการใช้งานมาแสดงตรงหน้าแรก ---
+st.info("💡 **วิธีการใช้งาน:** 1. ถ่ายรูปส่วนผสม (Ingredients) ให้ชัดเจน ➔ 2. อัปโหลดรูปลงระบบ ➔ 3. รอ AI ประมวลผลแยกหมวดหมู่สาร")
 
 # --- เพิ่มระบบให้เลือก 2 แท็บ (ถ่ายรูปสด / อัปโหลดรูป) ---
 tab1, tab2 = st.tabs(["📸 ถ่ายรูปจากกล้อง", "📂 อัปโหลดรูปภาพ"])
@@ -77,7 +66,7 @@ with tab1:
 with tab2:
     uploaded_file = st.file_uploader("เลือกรูปภาพ...", type=['jpg', 'jpeg', 'png'])
 
-# ดึงไฟล์ภาพมาใช้ ไม่ว่าจะมาจากกล้องหรืออัปโหลด
+# ดึงไฟล์ภาพมาใช้
 img_file = camera_file if camera_file is not None else uploaded_file
 
 if img_file is not None:
@@ -89,18 +78,17 @@ if img_file is not None:
         st.image(image, caption='ภาพสลากที่กำลังตรวจสอบ', use_container_width=True)
         
     with col_res:
-        with st.spinner('🤖 AI กำลังปรับความคมชัดและกวาดสายตาอ่านข้อความ...'):
+        with st.spinner('🤖 AI กำลังปรับภาพและกวาดสายตาอ่านข้อความ...'):
             try:
-                # --- พัฒนาระบบ AI ปรับแต่งภาพ (แก้ภาพเบลอ/สีกลืน) ---
+                # --- พัฒนาระบบ AI ปรับแต่งภาพ (ลดความแข็งของฟิลเตอร์ลง) ---
+                # 1. ปรับเป็นภาพสีเทา เพื่อลดความสับสนของสีพื้นหลัง
                 gray_img = image.convert('L')
+                # 2. เพิ่มคอนทราสต์แค่เล็กน้อย (1.5) ไม่ให้แสงมืดหรือกลืนเกินไป
                 enhancer_contrast = ImageEnhance.Contrast(gray_img)
-                img_contrast = enhancer_contrast.enhance(3.0)
-                enhancer_sharpness = ImageEnhance.Sharpness(img_contrast)
-                img_sharp = enhancer_sharpness.enhance(3.0)
-                processed_img = img_sharp.point(lambda x: 0 if x < 140 else 255, '1')
+                processed_img = enhancer_contrast.enhance(1.5)
                 
                 with st.expander("👁️ ดูมุมมองภาพจำลองที่ AI ใช้สแกนข้อความ"):
-                    st.image(processed_img, caption='ภาพผ่านกระบวนการปรับสี', use_container_width=True)
+                    st.image(processed_img, caption='ภาพปรับสีเทาเพื่อการอ่าน', use_container_width=True)
 
                 # ดึงข้อความ
                 extracted_text = pytesseract.image_to_string(processed_img)
