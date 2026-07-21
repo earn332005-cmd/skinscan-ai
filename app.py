@@ -10,35 +10,39 @@ import difflib
 # =========================================
 st.markdown("""
     <style>
-    /* ใช้ฟังก์ชัน Dark/Light Mode ของ Streamlit โดยตรง เพื่อไม่ให้ตัวหนังสือกลืนกับพื้นหลัง */
-    @media (prefers-color-scheme: dark) {
-        .stApp {
-            background-color: #0e1117;
-            color: #ffffff;
-        }
+    /* ปรับพื้นหลังหลักให้เป็นสีเทานวลสะอาดตา อ่านง่ายสบายตาในทุกโหมด */
+    [data-testid="stAppViewContainer"] {
+        background-color: #f8f9fa;
     }
     
-    @media (prefers-color-scheme: light) {
-        .stApp {
-            background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 100%);
-            color: #31333F;
-        }
+    [data-testid="stHeader"] {
+        background-color: transparent;
     }
-
-    /* ตกแต่งกล่องข้อความอธิบาย (Info / Warning / Success) ให้ตัวหนังสือคมชัด ไม่กลืนกัน */
+    
+    /* บังคับให้ตัวหนังสือหลักเป็นสีเข้มคมชัด */
+    h1, h2, h3, h4, h5, h6, p, span, label {
+        color: #2c3e50 !important;
+    }
+    
+    /* ตกแต่งกล่องข้อความอธิบาย (Info) ให้เด่นชัด ขอบมนสวยงาม */
     div.stAlert {
+        background-color: #e3f2fd !important;
+        color: #0d47a1 !important;
         border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         border: none;
     }
+    div.stAlert p {
+        color: #0d47a1 !important;
+    }
     
-    /* ปรับแต่งปุ่มกดให้สวยงามและตัวหนังสืออ่านง่าย */
+    /* ตกแต่งปุ่มกดให้เป็นสีชมพูพาสเทลสกินแคร์ น่ารักสดใส */
     .stButton>button {
         border-radius: 20px;
         font-weight: bold;
         border: none;
         background-color: #ffb6c1;
-        color: #ffffff;
+        color: white !important;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
     }
@@ -47,13 +51,14 @@ st.markdown("""
         transform: translateY(-2px);
         background-color: #ff9eaa;
         box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        color: #ffffff;
     }
     
-    /* ปรับแต่งกล่อง Expander ผลลัพธ์ให้ตัดกับพื้นหลังอย่างชัดเจน */
+    /* ตกแต่งกล่อง Expander ผลลัพธ์ */
     .streamlit-expanderHeader {
+        background-color: #ffffff;
         border-radius: 8px;
         font-weight: bold;
+        color: #2c3e50 !important;
     }
     </style>
     """, unsafe_allow_html=True)
