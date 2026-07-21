@@ -1,244 +1,295 @@
 ﻿ingredient,function,risk_level
-water,น้ำบริสุทธิ์ ตัวทำละลายหลักในผลิตภัณฑ์,Safe
-glycerin,สารกักเก็บความชุ่มชื้น ดึงน้ำเข้าสู่ผิว,Safe
-niacinamide,วิตามินบี 3 ลดรอยดำ รอยแดง ควบคุมความมัน,Safe
-hyaluronic acid,เติมความชุ่มชื้น อิ่มน้ำ ลดริ้วรอยร่องตื้น,Safe
-salicylic acid,BHA ช่วยผลัดเซลล์ผิว สลายสิ่งอุดตันในรูขุมขน (ลดสิว),Safe
-centella asiatica extract,สารสกัดใบบัวบก ลดการอักเสบ ปลอบประโลมผิว,Safe
-aloe barbadensis leaf juice,สารสกัดว่านหางจระเข้ เติมความชุ่มชื้น ลดอาการแสบร้อน,Safe
-tocopherol,วิตามินอี ต้านอนุมูลอิสระ ปกป้องผิวจากความชรา,Safe
-ceramides,เสริมชั้นผิวให้แข็งแรง กักเก็บความชุ่มชื้น,Safe
-zinc oxide,สารกันแดดแบบสะท้อนแสง ปลอดภัยต่อผิวแพ้ง่าย,Safe
-titanium dioxide,สารกันแดดและสารให้สีขาว (มักเจอในแป้งพัฟและกันแดด),Safe
-mica,แร่ธรรมชาติช่วยสร้างความประกาย/วิ้งค์ (มักเจอในแป้งและอายแชโดว์),Safe
-silica,ผงช่วยดูดซับความมันส่วนเกินบนใบหน้า (มักเจอในแป้งพัฟ),Safe
-talc,แร่ทัลก์ ช่วยให้เนื้อแป้งเนียนนุ่มลื่น (ผิวแพ้ง่ายมากควรระวัง),Warning
+"1,2-hexanediol",สารกันเสียอ่อนๆ และช่วยให้ความชุ่มชื้น,Safe
+3-o-ethyl ascorbic acid,อนุพันธ์วิตามินซี ซึมลึก กระจ่างใสไว,Safe
+acetyl hexapeptide-8,โบท็อกซ์แบบทา ช่วยลดริ้วรอยจากการแสดงอารมณ์,Safe
+acrylates/c10-30 alkyl acrylate crosspolymer,สารสร้างเนื้อเจล ซึมไว ไม่เหนอะหนะ,Safe
+adenosine,พลังงานเซลล์ผิว ช่วยลดริ้วรอยร่องลึก,Safe
 alcohol denat,แอลกอฮอล์ช่วยให้แห้งไว แต่ทำให้ผิวแห้งกร้านและระคายเคือง,Warning
-fragrance,น้ำหอมสังเคราะห์ เสี่ยงต่อการแพ้และระคายเคืองสูง,Warning
-parfum,น้ำหอมสังเคราะห์ (อีกชื่อหนึ่ง) เสี่ยงต่อการระคายเคือง,Warning
-mineral oil,น้ำมันแร่ กักเก็บความชุ่มชื้นดี แต่อาจอุดตันผิวสำหรับคนเป็นสิว,Warning
-dimethicone,ซิลิโคนช่วยให้เนื้อเนียนลื่น แต่อาจสะสมและอุดตันรูขุมขน,Warning
-phenoxyethanol,สารกันเสียที่ค่อนข้างปลอดภัย แต่อาจระคายเคืองในผิวที่บอบบางมาก,Warning
-methylparaben,สารกันเสียกลุ่มพาราเบน เสี่ยงต่อการแพ้สะสมและรบกวนฮอร์โมน,Danger
-propylparaben,สารกันเสียกลุ่มพาราเบน เสี่ยงแพ้และระคายเคืองสูง,Danger
-hydroquinone,ไฮโดรควิโนน สารหน้าขาวไว ห้ามใช้ในเครื่องสำอางทั่วไป (ทำให้หน้าด่าง),Danger
-mercury,สารปรอท สารอันตรายร้ายแรง หน้าขาวไวแต่ทำลายระบบประสาทและไต,Danger
-retinoic acid,กรดวิตามินเอ (เรตินอยด์เข้มข้น) ห้ามใช้ในเครื่องสำอาง (ผิวลอกและไวต่อแสง),Danger
-squalane,เติมความชุ่มชื้น ล็อคน้ำในผิว ไม่อุดตัน,Safe
-panthenol,วิตามินบี 5 ฟื้นฟูเกราะป้องกันผิว,Safe
 allantoin,ลดการระคายเคือง ปลอบประโลมผิว,Safe
-lactic acid,AHA อ่อนโยน ผลัดเซลล์ผิว เพิ่มความชุ่มชื้น ยังใช้ปรับสมดุล pH ได้ด้วย,Safe
-glycolic acid,AHA ผลัดเซลล์ผิว ลดรอยดำ (อาจระคายเคืองถ้าเข้มข้นสูง),Safe
-kaolin,โคลนขาว ดูดซับความมัน (เมคอัพ/มาส์ก),Safe
-iron oxides,แม่สีธรรมชาติ (สีแดง/เหลือง/ดำในลิปสติกและรองพื้น),Safe
-cera alba,ขี้ผึ้ง (Beeswax) ให้เนื้อสัมผัสในลิปสติกและบาล์ม,Safe
-butyrospermum parkii butter,เชียบัตเตอร์ ให้ความชุ่มชื้นสูงมาก,Safe
-simmondsia chinensis seed oil,โจโจ้บาออยล์ คุมมัน ไม่อุดตันรูขุมขน,Safe
-butylene glycol,ตัวทำละลาย/ดึงความชุ่มชื้น พบบ่อยมาก,Safe
-carmine,เม็ดสีแดงจากธรรมชาติ (มักพบในลิปสติก/บลัชออน),Safe
-sodium lauryl sulfate,SLS สารทำความสะอาด (โฟมล้างหน้า) ทำให้ผิวแห้งตึง,Warning
-sodium laureth sulfate,SLES สารทำความสะอาด อ่อนโยนกว่า SLS แต่ยังทำให้ผิวแห้ง,Warning
-isopropyl myristate,ทำให้เนื้อครีมซึมไว แต่ เสี่ยงอุดตันรูขุมขนสูงมาก,Warning
-linalool,สารแต่งกลิ่นหอม เสี่ยงระคายเคือง/ภูมิแพ้,Warning
-limonene,สารแต่งกลิ่นหอม (ซีตรัส) เสี่ยงระคายเคือง,Warning
+aloe barbadensis leaf extract,สารสกัดว่านหางจระเข้ เติมน้ำให้ผิวและลดรอยแดง,Safe
+aloe barbadensis leaf juice,สารสกัดว่านหางจระเข้ เติมความชุ่มชื้น ลดอาการแสบร้อน,Safe
+alpha-arbutin,อัลฟ่าอาร์บูติน ยับยั้งเม็ดสีเมลานิน ลดฝ้ากระ,Safe
+aminomethyl propanol,สารปรับค่า pH (อาจระคายเคืองในผิวบอบบางมาก),Warning
+ammoniated mercury,สารประกอบปรอท (อันตรายต่อไตและระบบประสาท),Danger
+arbutin,อาร์บูติน (แบบธรรมดา) ลดเม็ดสีเมลานิน,Safe
+argania spinosa kernel oil,น้ำมันอาร์แกน ให้ความชุ่มชื้นสูง ไม่อุดตัน,Safe
+ascorbic acid,วิตามินซีบริสุทธิ์ กระจ่างใส แต่อาจระคายเคือง,Warning
+ascorbyl glucoside,อนุพันธ์วิตามินซี เสถียรสูง ลดความหมองคล้ำ,Safe
+asiatic acid,สารสกัดจากใบบัวบก เสริมเกราะป้องกันผิวให้แข็งแรง,Safe
+asiaticoside,สารสกัดบริสุทธิ์จากใบบัวบก สมานแผลและลดรอยดำ,Safe
+astaxanthin,สุดยอดสารต้านอนุมูลอิสระจากสาหร่ายแดง ลดริ้วรอย,Safe
+avena sativa kernel extract,สารสกัดข้าวโอ๊ต ลดอาการคันและระคายเคือง,Safe
+avobenzone,สารกันแดด UVA ประสิทธิภาพสูง (อาจระคายเคือง),Warning
+azelaic acid,ลดสิวอักเสบ รอยแดง และการอุดตัน,Safe
+bakuchiol,สารสกัดแทนเรตินอล อ่อนโยน ไม่ระคายเคือง,Safe
+behentrimonium chloride,สารบำรุงในครีมนวดผม (ระคายเคืองถ้าโดนผิวหน้านาน),Warning
+benzophenone-3,อ็อกซีเบนโซน กันแดดเคมี (เสี่ยงแพ้สูง/ทำลายปะการัง),Danger
+benzyl alcohol,สารกันเสียและน้ำหอม (ระคายเคืองผิวแพ้ง่าย),Warning
+beta-glucan,ปลอบประโลมผิว ลดการอักเสบและเสริมภูมิคุ้มกันผิว,Safe
+betamethasone,สารสเตียรอยด์ (ทำให้เกิดสิวสเตียรอยด์และผิวพัง),Danger
 bht,สารกันหืน/กันเสีย เสี่ยงระคายเคือง,Warning
-peg-40 hydrogenated castor oil,ตัวประสานน้ำกับน้ำมัน อาจปนเปื้อนสารอันตราย,Warning
-triclosan,สารยับยั้งแบคทีเรีย เสี่ยงสะสมและรบกวนฮอร์โมน,Danger
-formaldehyde,สารกันเสีย เสี่ยงก่อมะเร็ง,Danger
-lead,สารตะกั่ว (มักปนเปื้อนในลิปสติกปลอม) อันตรายสะสม,Danger
-phthalates,ตัวทำละลายน้ำหอม รบกวนระบบฮอร์โมน,Danger
-coal tar,สีสังเคราะห์จากน้ำมันดิน เสี่ยงก่อมะเร็ง,Danger
-sodium hyaluronate,ไฮยาลูรอนิคโมเลกุลเล็ก ซึมลึก เติมน้ำให้ผิว,Safe
-hydrolyzed hyaluronic acid,ไฮยาโมเลกุลจิ๋ว ซึมซาบไวสุด ลดริ้วรอย,Safe
-ceramide np,เซราไมด์ เสริมเกราะป้องกันผิวให้แข็งแรง,Safe
+bifida ferment lysate,โปรไบโอติก ฟื้นฟู DNA ผิวชั้นลึก,Safe
+biotin,วิตามินบี 7 บำรุงผิว ผม เล็บ,Safe
+bis-ethylhexyloxyphenol methoxyphenyl triazine,Tinosorb S กันแดดประสิทธิภาพสูง เสถียรมาก,Safe
+bismuth chloride,สารเพิ่มความขาว (ระคายเคืองรุนแรงและเป็นพิษ),Danger
+bismuth oxychloride,แร่ธาตุให้ความวาว (เสี่ยงอุดตันและก่อให้เกิดสิวสูงมาก),Danger
+"bromo-2-nitropropane-1,3-diol",สารกันเสียที่ปล่อยฟอร์มาลดีไฮด์ (อันตรายมาก),Danger
+butyl methoxydibenzoylmethane,สารกันแดด UVA (Avobenzone) เสื่อมสภาพไว,Warning
+butylene glycol,ตัวทำละลาย/ดึงความชุ่มชื้น พบบ่อยมาก,Safe
+butyloctyl salicylate,ตัวทำละลายที่ช่วยเพิ่มประสิทธิภาพสารกันแดด,Safe
+butyrospermum parkii butter,เชียบัตเตอร์ ให้ความชุ่มชื้นสูงมาก,Safe
+c12-15 alkyl benzoate,สารให้ความนุ่มลื่น มักใช้ในครีมกันแดด,Safe
+c13-14 isoparaffin,ตัวทำละลาย มักใช้คู่กับ Polyacrylamide,Safe
+caffeine,คาเฟอีน กระตุ้นการไหลเวียนเลือด ลดตาบวม,Safe
+calendula officinalis extract,สารสกัดดอกดาวเรือง ลดการอักเสบ สมานแผล,Safe
+calendula officinalis flower extract,สารสกัดดอกดาวเรือง สมานแผลและลดการระคายเคือง,Safe
+camellia sinensis leaf extract,สารสกัดชาเขียว ต้านอนุมูลอิสระ ลดหน้ามัน,Safe
+cananga odorata flower oil,น้ำมันกระดังงา (อาจกระตุ้นภูมิแพ้ผิวหนังในบางคน),Warning
+caprylhydroxamic acid,สารกันเสียยุคใหม่ อ่อนโยนมาก และจับประจุ อ่อนโยนต่อผิว,Safe
+caprylic/capric triglyceride,กรดไขมันจากมะพร้าว ให้ความนุ่มลื่น ไม่อุดตัน,Safe
+capryloyl salicylic acid,LHA อนุพันธ์ของ BHA ซึมลึกกว่าแต่ระคายเคืองน้อยกว่า,Safe
+caprylyl glycol,ให้ความชุ่มชื้นและต้านเชื้อแบคทีเรีย,Safe
+caprylyl/capryl glucoside,สารทำความสะอาดและตัวประสาน อ่อนโยน,Safe
+carbomer,สารสร้างเนื้อเจลใส ปลอดภัย ไม่อุดตัน,Safe
+carmine,เม็ดสีแดงจากธรรมชาติ (มักพบในลิปสติก/บลัชออน),Safe
+carnosine,เปปไทด์ปกป้องผิวจากน้ำตาล (Anti-glycation) ชะลอวัย,Safe
+cellulose gum,สารเพิ่มความหนืดจากธรรมชาติ,Safe
+centella asiatica extract,สารสกัดใบบัวบก ลดการอักเสบ ปลอบประโลมผิว,Safe
+cera alba,ขี้ผึ้ง (Beeswax) ให้เนื้อสัมผัสในลิปสติกและบาล์ม,Safe
 ceramide ap,เซราไมด์ ช่วยกักเก็บความชุ่มชื้น,Safe
 ceramide eop,เซราไมด์ ฟื้นฟูผิวที่แห้งเสียรุนแรง,Safe
-phytosphingosine,ไขมันธรรมชาติ ช่วยลดสิวและเสริมชั้นผิว,Safe
-cholesterol,คอเลสเตอรอล (ดี) เสริมความแข็งแรงให้ผิว,Safe
-caprylic/capric triglyceride,กรดไขมันจากมะพร้าว ให้ความนุ่มลื่น ไม่อุดตัน,Safe
-cetearyl alcohol,แอลกอฮอล์ชนิดดี (Fatty Alcohol) ช่วยให้ผิวนุ่ม,Safe
-cetyl alcohol,แอลกอฮอล์ชนิดดี ให้เนื้อครีมคงตัวและผิวนุ่ม,Safe
-stearyl alcohol,แอลกอฮอล์ชนิดดี เคลือบผิวไม่ให้เสียความชุ่มชื้น,Safe
-propylene glycol,สารดึงความชุ่มชื้นและตัวทำละลาย (พบบ่อยมาก),Safe
-dipropylene glycol,ตัวทำละลายและดึงน้ำเข้าผิว อ่อนโยนกว่า PG,Safe
-"1,2-hexanediol",สารกันเสียอ่อนๆ และช่วยให้ความชุ่มชื้น,Safe
-caprylyl glycol,ให้ความชุ่มชื้นและต้านเชื้อแบคทีเรีย,Safe
-trehalose,น้ำตาลธรรมชาติ ปกป้องเซลล์ผิวจากความแห้ง,Safe
-sodium pca,สารให้ความชุ่มชื้นที่มีอยู่แล้วตามธรรมชาติในผิว,Safe
-ascorbic acid,วิตามินซีบริสุทธิ์ กระจ่างใส แต่อาจระคายเคือง,Warning
-sodium ascorbyl phosphate,อนุพันธ์วิตามินซี อ่อนโยน เสถียร ลดสิวได้,Safe
-magnesium ascorbyl phosphate,อนุพันธ์วิตามินซี ช่วยเรื่องความกระจ่างใส,Safe
-tocopheryl acetate,อนุพันธ์วิตามินอี ต้านอนุมูลอิสระ เสถียรสูง,Safe
-retinol,วิตามินเอ ลดริ้วรอย (ห้ามใช้ในสตรีมีครรภ์/ผิวระคายเคืองง่าย),Warning
-retinyl palmitate,อนุพันธ์วิตามินเอ อ่อนโยนกว่า Retinol,Warning
-bakuchiol,สารสกัดแทนเรตินอล อ่อนโยน ไม่ระคายเคือง,Safe
-copper tripeptide-1,เปปไทด์กระตุ้นคอลลาเจน สมานแผล,Safe
-acetyl hexapeptide-8,โบท็อกซ์แบบทา ช่วยลดริ้วรอยจากการแสดงอารมณ์,Safe
-mandelic acid,AHA โมเลกุลใหญ่ อ่อนโยนสุด เหมาะกับผิวแพ้ง่าย,Safe
-tartaric acid,AHA จากผลไม้ ช่วยปรับสมดุล pH และผลัดผิว,Safe
-malic acid,AHA จากแอปเปิ้ล ช่วยให้ผิวกระจ่างใส,Safe
-polyhydroxy acid,PHA ผลัดเซลล์ผิวอย่างอ่อนโยนมาก ไม่ไวต่อแสง,Safe
-citric acid,ปรับสมดุลค่า pH ในเครื่องสำอาง กรดผลไม้ ใช้ปรับ pH ให้มีความเป็นกรดอ่อนๆ,Safe
-camellia sinensis leaf extract,สารสกัดชาเขียว ต้านอนุมูลอิสระ ลดหน้ามัน,Safe
-glycyrrhiza glabra root extract,สารสกัดชะเอมเทศ ลดรอยดำ รอยแดง กระจ่างใส,Safe
-chamomilla recutita extract,สารสกัดคาโมมายล์ ปลอบประโลมผิวแพ้ง่าย,Safe
-rosmarinus officinalis extract,สารสกัดโรสแมรี่ ต้านเชื้อแบคทีเรีย,Safe
-argania spinosa kernel oil,น้ำมันอาร์แกน ให้ความชุ่มชื้นสูง ไม่อุดตัน,Safe
-rosa canina fruit oil,น้ำมันโรสฮิป ลดรอยสิวและริ้วรอย,Safe
-melaleuca alternifolia leaf oil,น้ำมันทีทรีรักษาสิว (อาจระคายเคืองถ้าเข้มข้นสูง),Warning
-lavandula angustifolia oil,น้ำมันหอมระเหยลาเวนเดอร์ (เสี่ยงแพ้/ระคายเคือง),Warning
-eucalyptus globulus leaf oil,น้ำมันยูคาลิปตัส (เสี่ยงระคายเคืองสูง),Warning
-citrus aurantium dulcis oil,น้ำมันสกัดเปลือกส้ม (เสี่ยงระคายเคือง/ไวต่อแสง),Warning
-mentha piperita oil,น้ำมันเปปเปอร์มินต์ ให้ความเย็น (เสี่ยงระคายเคือง),Warning
-cocamidopropyl betaine,สารทำความสะอาดที่อ่อนโยน ฟองเยอะ,Safe
-decyl glucoside,สารทำความสะอาดจากธรรมชาติ อ่อนโยนมาก,Safe
-coco-glucoside,สารทำความสะอาด อ่อนโยน เหมาะกับผิวบอบบาง,Safe
-sodium cocoyl isethionate,สารทำความสะอาดฟองนุ่ม ไม่ทำร้ายเกราะป้องกันผิว,Safe
-polysorbate 20,ตัวทำละลายน้ำกับน้ำมัน (มักเจอในโทนเนอร์/คลีนซิ่ง),Safe
-peg-100 stearate,สารประสานน้ำกับน้ำมัน (เสี่ยงปนเปื้อนหากไม่ได้มาตรฐาน),Warning
+ceramide np,เซราไมด์ เสริมเกราะป้องกันผิวให้แข็งแรง,Safe
+ceramides,เสริมชั้นผิวให้แข็งแรง กักเก็บความชุ่มชื้น,Safe
 ceteareth-20,สารประสานเนื้อครีม (เสี่ยงระคายเคืองถ้าใช้ร่วมกับสารรุนแรง),Warning
-octocrylene,สารกันแดดเคมี (อาจทำให้แสบตาหรือระคายเคือง),Warning
-avobenzone,สารกันแดด UVA ประสิทธิภาพสูง (อาจระคายเคือง),Warning
-homosalate,สารกันแดด UVB (เสี่ยงรบกวนฮอร์โมน/ระคายเคือง),Warning
-octisalate,สารกันแดด UVB มักใช้คู่กับสารอื่น,Safe
-benzophenone-3,อ็อกซีเบนโซน กันแดดเคมี (เสี่ยงแพ้สูง/ทำลายปะการัง),Danger
-cyclopentasiloxane,ซิลิโคนระเหยไว ช่วยให้เกลี่ยง่าย (ระวังอุดตัน),Warning
-cyclohexasiloxane,ซิลิโคนให้ความนุ่มลื่น ไม่เหนอะหนะ (ระวังอุดตัน),Warning
-phenyl trimethicone,ซิลิโคนให้ความเงางาม (มักเจอในรองพื้น/ครีมผม),Warning
-carbomer,สารสร้างเนื้อเจลใส ปลอดภัย ไม่อุดตัน,Safe
-xanthan gum,สารเพิ่มความหนืดจากธรรมชาติ ปลอดภัย,Safe
-hydroxyethylcellulose,สารเพิ่มความหนืด มักเจอในเซรั่ม,Safe
-disodium edta,สารจับประจุโลหะ ช่วยให้ครีมไม่เสีย/เปลี่ยนสี,Safe
-tetrasodium edta,สารรักษาความคงตัวของผลิตภัณฑ์,Safe
-triethanolamine,สารปรับค่า pH (ถ้าเข้มข้นสูงหรือทิ้งไว้นานอาจระคายเคือง),Warning
-synthetic fluorphlogopite,ไมก้าสังเคราะห์ ให้ความวิ้งค์/ชิมเมอร์ ปลอดภัย,Safe
-tin oxide,แร่ธาตุให้ประกายมุก มักผสมกับไมก้า,Safe
-ultramarines,เม็ดสีน้ำเงิน/ม่วง/ชมพู ปลอดภัย,Safe
-bismuth oxychloride,แร่ธาตุให้ความวาว (เสี่ยงอุดตันและก่อให้เกิดสิวสูงมาก),Danger
-methylisothiazolinone,สารกันเสีย (MIT) เสี่ยงก่อให้เกิดภูมิแพ้ผิวหนังรุนแรง,Danger
-methylchloroisothiazolinone,สารกันเสีย (CMIT) มักใช้คู่ MIT เสี่ยงแพ้รุนแรง,Danger
-dmdm hydantoin,สารกันเสียที่ปล่อยสารฟอร์มาลดีไฮด์ (ก่อมะเร็ง/แพ้),Danger
-imidazolidinyl urea,สารกันเสียปล่อยฟอร์มาลดีไฮด์ (เสี่ยงแพ้สูง),Danger
-diazolidinyl urea,สารกันเสียปล่อยฟอร์มาลดีไฮด์ (เสี่ยงแพ้สูง),Danger
-quaternium-15,สารกันเสียปล่อยฟอร์มาลดีไฮด์ (เสี่ยงแพ้และอันตราย),Danger
+cetearyl alcohol,แอลกอฮอล์ชนิดดี (Fatty Alcohol) ช่วยให้ผิวนุ่ม,Safe
+cetrimonium chloride,สารกันไฟฟ้าสถิตในครีมนวดผม (เสี่ยงระคายเคืองผิว),Warning
+cetyl alcohol,แอลกอฮอล์ชนิดดี ให้เนื้อครีมคงตัวและผิวนุ่ม,Safe
+chamomilla recutita extract,สารสกัดคาโมมายล์ ปลอบประโลมผิวแพ้ง่าย,Safe
+chamomilla recutita flower extract,สารสกัดคาโมมายล์ ลดการอักเสบและลดรอยแดง,Safe
+chloroacetamide,สารกันเสีย (แบนในยุโรปเพราะมีความเสี่ยงเป็นพิษต่อระบบสืบพันธุ์),Danger
+chloroform,ตัวทำละลาย (เป็นสารก่อมะเร็งและเป็นพิษต่อร่างกาย ห้ามใช้),Danger
 chlorphenesin,สารกันเสียต้านเชื้อรา (อาจระคายเคืองในคนผิวบาง),Warning
-sodium benzoate,สารกันเสียระดับ Food Grade อ่อนโยน,Safe
-potassium sorbate,สารกันเสียจากธรรมชาติ อ่อนโยน,Safe
-alpha-arbutin,อัลฟ่าอาร์บูติน ยับยั้งเม็ดสีเมลานิน ลดฝ้ากระ,Safe
-tranexamic acid,ลดรอยแดง รอยดำ ฝ้าแดดฝังลึก,Safe
-kojic acid,สารสกัดจากเห็ด/ข้าวหมัก ช่วยให้ผิวขาว (อาจระคายเคือง),Warning
-azelaic acid,ลดสิวอักเสบ รอยแดง และการอุดตัน,Safe
-ferulic acid,สารต้านอนุมูลอิสระ มักใช้คู่กับวิตามินซี,Safe
-resveratrol,สารสกัดจากองุ่น ต้านริ้วรอยและอนุมูลอิสระ,Safe
-ubiquinone,โคเอนไซม์คิวเทน (CoQ10) ลดริ้วรอย,Safe
-thioctic acid,กรดอัลฟ่าไลโปอิก (ALA) ต้านริ้วรอยระดับเซลล์,Safe
-adenosine,พลังงานเซลล์ผิว ช่วยลดริ้วรอยร่องลึก,Safe
-caffeine,คาเฟอีน กระตุ้นการไหลเวียนเลือด ลดตาบวม,Safe
-pantothenic acid,วิตามินบี 5 (แบบกรด) ลดความมัน ลดสิว,Safe
-biotin,วิตามินบี 7 บำรุงผิว ผม เล็บ,Safe
-panax ginseng root extract,สารสกัดโสม กระตุ้นการไหลเวียนเลือด หน้าใส,Safe
-portulaca oleracea extract,สารสกัดผักเบี้ยใหญ่ ปลอบประโลมผิว ลดอักเสบ,Safe
-morus alba root extract,สารสกัดรากมัลเบอร์รี่ ช่วยให้ผิวกระจ่างใส,Safe
-punica granatum extract,สารสกัดทับทิม ต้านอนุมูลอิสระ,Safe
-vitis vinifera seed extract,สารสกัดเมล็ดองุ่น ต้านริ้วรอย,Safe
-ginkgo biloba leaf extract,สารสกัดใบแปะก๊วย ฟื้นฟูเซลล์ผิว,Safe
-cucumis sativus fruit extract,สารสกัดแตงกวา เติมน้ำ ลดความร้อนที่ผิว,Safe
-avena sativa kernel extract,สารสกัดข้าวโอ๊ต ลดอาการคันและระคายเคือง,Safe
-calendula officinalis extract,สารสกัดดอกดาวเรือง ลดการอักเสบ สมานแผล,Safe
-hamamelis virginiana water,วิชฮาเซล กระชับรูขุมขน (อาจมีแอลกอฮอล์ผสม),Warning
-propolis extract,สารสกัดพรอพอลิส (รังผึ้ง) ต้านแบคทีเรียสิว,Safe
-snail secretion filtrate,เมือกหอยทาก ซ่อมแซมผิวและให้ความชุ่มชื้น,Safe
-galactomyces ferment filtrate,พิเทร่า (ยีสต์หมัก) ผิวกระจ่างใส รูขุมขนกระชับ,Safe
-bifida ferment lysate,โปรไบโอติก ฟื้นฟู DNA ผิวชั้นลึก,Safe
-lactobacillus ferment,โปรไบโอติก ปรับสมดุลแบคทีเรียบนผิว,Safe
-palmitoyl tripeptide-1,เปปไทด์กระตุ้นการสร้างคอลลาเจน,Safe
-palmitoyl tetrapeptide-7,เปปไทด์ลดการอักเสบและลดริ้วรอย,Safe
-palmitoyl pentapeptide-4,Matrixyl ช่วยเรื่องความยืดหยุ่นของผิว,Safe
-dipeptide-2,เปปไทด์ช่วยลดถุงใต้ตา,Safe
-myristoyl pentapeptide-17,เปปไทด์เร่งขนตา/ขนคิ้วให้ยาวขึ้น,Safe
-olea europaea fruit oil,น้ำมันมะกอก ชุ่มชื้นสูง (เสี่ยงอุดตันคนผิวมัน),Warning
-macadamia ternifolia seed oil,น้ำมันแมคคาเดเมีย ซึมลึก บำรุงผิวแห้ง,Safe
-prunus amygdalus dulcis oil,น้ำมันอัลมอนด์ อ่อนโยน บำรุงผิว,Safe
-helianthus annuus seed oil,น้ำมันเมล็ดทานตะวัน เสริมเกราะป้องกันผิว,Safe
-cocos nucifera oil,น้ำมันมะพร้าว ชุ่มชื้นดีมาก แต่ อุดตันสูงมาก,Danger
-theobroma cacao seed butter,โกโก้บัตเตอร์ ชุ่มชื้นสูง (เสี่ยงอุดตัน),Warning
-mangifera indica seed butter,แมงโก้บัตเตอร์ ให้ความชุ่มชื้น,Safe
-persea gratissima oil,น้ำมันอะโวคาโด ฟื้นฟูผิวแห้งกร้าน,Safe
-isododecane,ตัวทำละลายที่ระเหยไว (มักเจอในลิปแมตต์),Safe
-isohexadecane,ทำให้เนื้อสัมผัสเบาสบาย เกลี่ยง่าย,Safe
-c12-15 alkyl benzoate,สารให้ความนุ่มลื่น มักใช้ในครีมกันแดด,Safe
-isopropyl palmitate,ทำให้เนื้อครีมนุ่ม แต่ เสี่ยงอุดตันรูขุมขนสูง,Warning
-ethylhexyl palmitate,สารให้ความนุ่มลื่น (เสี่ยงอุดตันปานกลาง),Warning
-dicaprylyl carbonate,ออยล์เนื้อเบา ไม่อุดตันผิว,Safe
-sodium lauroyl sarcosinate,สารทำความสะอาด อ่อนโยนกว่ากลุ่ม SLS,Safe
-sodium cocoyl glutamate,สารทำความสะอาดจากกรดอะมิโน อ่อนโยนมาก,Safe
-lauryl glucoside,สารทำความสะอาดจากธรรมชาติ ไม่ทำร้ายผิว,Safe
-caprylyl/capryl glucoside,สารทำความสะอาดและตัวประสาน อ่อนโยน,Safe
-cocamide mea,สารเพิ่มฟอง (อาจระคายเคืองตา/ผิวบาง),Warning
-cocamide dea,สารเพิ่มฟอง (เสี่ยงก่อมะเร็งหากผสมสารอื่น),Danger
-tea-lauryl sulfate,สารทำความสะอาด (ระคายเคืองผิวและตา),Warning
-sodium methyl cocoyl taurate,สารทำความสะอาดฟองนุ่ม ปลอดภัย,Safe
-acrylates/c10-30 alkyl acrylate crosspolymer,สารสร้างเนื้อเจล ซึมไว ไม่เหนอะหนะ,Safe
-polyacrylamide,สารเพิ่มความหนืด สร้างฟิล์มเคลือบผิว,Safe
-c13-14 isoparaffin,ตัวทำละลาย มักใช้คู่กับ Polyacrylamide,Safe
-laureth-7,สารประสานน้ำและน้ำมัน (มักมาเป็นชุดกับตัวบน),Safe
-cellulose gum,สารเพิ่มความหนืดจากธรรมชาติ,Safe
-sclerotium gum,สารสร้างเนื้อเจลและให้ความชุ่มชื้น,Safe
-pullulan,สารให้ความตึงกระชับผิวชั่วคราว,Safe
-magnesium aluminum silicate,โคลนขาวธรรมชาติ ช่วยเพิ่มความข้นเนื้อครีม,Safe
-benzyl alcohol,สารกันเสียและน้ำหอม (ระคายเคืองผิวแพ้ง่าย),Warning
-dehydroacetic acid,สารกันเสีย อ่อนโยน ปลอดภัย,Safe
-sorbic acid,สารกันเสียจากธรรมชาติ ปลอดภัย,Safe
-caprylhydroxamic acid,สารกันเสียยุคใหม่ อ่อนโยนมาก และจับประจุ อ่อนโยนต่อผิว,Safe
-ethylhexylglycerin,สารบำรุงผิวที่ช่วยบูสต์ประสิทธิภาพสารกันเสีย,Safe
-piroctone olamine,รักษารังแคและเชื้อรา (แชมพู/ยาสระผม),Safe
-climbazole,สารต้านเชื้อรา (รักษารังแค),Safe
-triclocarban,สารต้านแบคทีเรีย (สบู่ก้อน) รบกวนฮอร์โมน,Danger
-"bromo-2-nitropropane-1,3-diol",สารกันเสียที่ปล่อยฟอร์มาลดีไฮด์ (อันตรายมาก),Danger
-ethylhexyl methoxycinnamate,สารกันแดด UVB ยอดฮิต (อาจรบกวนฮอร์โมน),Warning
-ethylhexyl salicylate,สารกันแดด UVB ช่วยละลายสารกันแดดตัวอื่น,Safe
-butyl methoxydibenzoylmethane,สารกันแดด UVA (Avobenzone) เสื่อมสภาพไว,Warning
-bis-ethylhexyloxyphenol methoxyphenyl triazine,Tinosorb S กันแดดประสิทธิภาพสูง เสถียรมาก,Safe
-diethylamino hydroxybenzoyl hexyl benzoate,Uvinul A Plus กันแดด UVA รุ่นใหม่ เสถียรสูง,Safe
-urea,ยูเรีย ให้ความชุ่มชื้นและผลัดเซลล์ผิว,Safe
-collagen,คอลลาเจน เคลือบผิวให้ชุ่มชื้น (โมเลกุลใหญ่ซึมไม่ได้),Safe
-hydrolyzed collagen,คอลลาเจนสกัด ซึมได้ดีขึ้น ให้ผิว/ผมนุ่ม,Safe
-elastin,อีลาสติน ให้ความยืดหยุ่นเคลือบผิว,Safe
-silk amino acids,กรดอะมิโนจากรังไหม บำรุงผิวและผมนุ่มสลวย,Safe
-keratin,เคราติน บำรุงเส้นผมให้แข็งแรง,Safe
-ci 77891,(Titanium Dioxide) สีขาว ให้ความทึบแสงในรองพื้น,Safe
-ci 77491,(Iron Oxide Red) แม่สีแดงธรรมชาติ ปลอดภัย,Safe
-ci 77492,(Iron Oxide Yellow) แม่สีเหลืองธรรมชาติ ปลอดภัย,Safe
-ci 77499,(Iron Oxide Black) แม่สีดำธรรมชาติ ปลอดภัย,Safe
+cholesterol,คอเลสเตอรอล (ดี) เสริมความแข็งแรงให้ผิว,Safe
 ci 15850,(Red 7 Lake) สีแดงสังเคราะห์ยอดฮิตในลิปสติก,Warning
 ci 19140,(Yellow 5 Lake) สีเหลืองสังเคราะห์ (เสี่ยงแพ้ในบางคน),Warning
 ci 42090,(Blue 1 Lake) สีน้ำเงินสังเคราะห์,Warning
-ci 77019,(Mica) ผงไมก้า ให้ความวาว/ชิมเมอร์,Safe
 ci 75470,(Carmine) สีแดงจากแมลงธรรมชาติ,Safe
-ascorbyl glucoside,อนุพันธ์วิตามินซี เสถียรสูง ลดความหมองคล้ำ,Safe
-3-o-ethyl ascorbic acid,อนุพันธ์วิตามินซี ซึมลึก กระจ่างใสไว,Safe
-tetrahexyldecyl ascorbate,อนุพันธ์วิตามินซีละลายในน้ำมัน อ่อนโยนมาก,Safe
-pyridoxine hcl,วิตามินบี 6 ลดความมันและสิว,Safe
-cyanocobalamin,วิตามินบี 12 ให้ครีมมีสีชมพูธรรมชาติ ฟื้นฟูผิว,Safe
-glutathione,กลูตาไธโอน สารต้านอนุมูลอิสระชั้นเยี่ยม,Safe
-arbutin,อาร์บูติน (แบบธรรมดา) ลดเม็ดสีเมลานิน,Safe
-sodium hydroxide,ด่างเข้มข้น ใช้ปรับ pH (ถ้าผสมไม่ดีจะกัดผิว),Warning
-potassium hydroxide,ด่างเข้มข้น ใช้ในสบู่/คลีนเซอร์ (อาจทำให้ผิวแห้ง),Warning
-tromethamine,สารปรับค่า pH ให้คงที่,Safe
-aminomethyl propanol,สารปรับค่า pH (อาจระคายเคืองในผิวบอบบางมาก),Warning
-hepes,สารบัฟเฟอร์ คุมค่า pH ให้เสถียร,Safe
-sodium citrate,เกลือของกรดซิตริก ช่วยปรับค่า pH,Safe
-gluconolactone,PHA ผลัดเซลล์ผิวพร้อมกักเก็บน้ำ อ่อนโยนสุดๆ,Safe
-lactobionic acid,PHA โมเลกุลใหญ่พิเศษ ไม่ระคายเคือง ต้านริ้วรอย,Safe
-capryloyl salicylic acid,LHA อนุพันธ์ของ BHA ซึมลึกกว่าแต่ระคายเคืองน้อยกว่า,Safe
-disodium laureth sulfosuccinate,สารทำความสะอาดโมเลกุลใหญ่ อ่อนโยนกว่า SLS,Safe
-sodium c14-16 olefin sulfonate,สารทำความสะอาดฟองเยอะ (ทำให้ผิวแห้งตึงมาก),Warning
+ci 77019,(Mica) ผงไมก้า ให้ความวาว/ชิมเมอร์,Safe
+ci 77491,(Iron Oxide Red) แม่สีแดงธรรมชาติ ปลอดภัย,Safe
+ci 77492,(Iron Oxide Yellow) แม่สีเหลืองธรรมชาติ ปลอดภัย,Safe
+ci 77499,(Iron Oxide Black) แม่สีดำธรรมชาติ ปลอดภัย,Safe
+ci 77891,(Titanium Dioxide) สีขาว ให้ความทึบแสงในรองพื้น,Safe
+cinnamomum zeylanicum bark oil,น้ำมันอบเชย (มีความเสี่ยงระคายเคืองผิวสูงมาก),Warning
+citric acid,ปรับสมดุลค่า pH ในเครื่องสำอาง กรดผลไม้ ใช้ปรับ pH ให้มีความเป็นกรดอ่อนๆ,Safe
+citronellol,สารแต่งกลิ่นหอม (อาจระคายเคืองผิวบอบบาง),Warning
+citrus aurantium dulcis oil,น้ำมันสกัดเปลือกส้ม (เสี่ยงระคายเคือง/ไวต่อแสง),Warning
+citrus aurantium dulcis peel oil,น้ำมันเปลือกส้ม (อาจทำให้ผิวไวต่อแสงแดดและคล้ำเสีย),Warning
+climbazole,สารต้านเชื้อรา (รักษารังแค),Safe
+clobetasol propionate,ยาสเตียรอยด์ชนิดรุนแรง (ห้ามใช้ในเครื่องสำอางเด็ดขาด),Danger
+coal tar,สีสังเคราะห์จากน้ำมันดิน เสี่ยงก่อมะเร็ง,Danger
+cocamide dea,สารเพิ่มฟอง (เสี่ยงก่อมะเร็งหากผสมสารอื่น),Danger
+cocamide mea,สารเพิ่มฟอง (อาจระคายเคืองตา/ผิวบาง),Warning
+cocamidopropyl betaine,สารทำความสะอาดที่อ่อนโยน ฟองเยอะ,Safe
 cocamidopropyl hydroxysultaine,สารบูสต์ฟอง อ่อนโยน ไม่ระคายเคืองตา,Safe
-polyquaternium-7,สารปรับสภาพผม/ผิว ให้ความลื่น (แชมพู/ครีมอาบน้ำ),Safe
+coco-glucoside,สารทำความสะอาด อ่อนโยน เหมาะกับผิวบอบบาง,Safe
+cocos nucifera oil,น้ำมันมะพร้าว ชุ่มชื้นดีมาก แต่ อุดตันสูงมาก,Danger
+collagen,คอลลาเจน เคลือบผิวให้ชุ่มชื้น (โมเลกุลใหญ่ซึมไม่ได้),Safe
+copper pca,ลดความมัน กระชับรูขุมขนและต้านเชื้อแบคทีเรีย,Safe
+copper tripeptide-1,เปปไทด์กระตุ้นคอลลาเจน สมานแผล,Safe
+cucumis sativus fruit extract,สารสกัดแตงกวา เติมน้ำ ลดความร้อนที่ผิว,Safe
+cyanocobalamin,วิตามินบี 12 ให้ครีมมีสีชมพูธรรมชาติ ฟื้นฟูผิว,Safe
+cyclohexasiloxane,ซิลิโคนให้ความนุ่มลื่น ไม่เหนอะหนะ (ระวังอุดตัน),Warning
+cyclopentasiloxane,ซิลิโคนระเหยไว ช่วยให้เกลี่ยง่าย (ระวังอุดตัน),Warning
+decyl glucoside,สารทำความสะอาดจากธรรมชาติ อ่อนโยนมาก,Safe
+dehydroacetic acid,สารกันเสีย อ่อนโยน ปลอดภัย,Safe
+dexamethasone,สารสเตียรอยด์ (ห้ามใช้ในเครื่องสำอาง ทำให้ผิวบางติดเชื้อ),Danger
+diazolidinyl urea,สารกันเสียปล่อยฟอร์มาลดีไฮด์ (เสี่ยงแพ้สูง),Danger
+dibutyl phthalate,สารพาทาเลต (รบกวนระบบฮอร์โมน ห้ามใช้),Danger
+dicaprylyl carbonate,ออยล์เนื้อเบา ไม่อุดตันผิว,Safe
+diethanolamine,DEA สารทำให้เกิดฟอง (ถูกแบนในหลายประเทศ เสี่ยงก่อมะเร็ง),Danger
+diethylamino hydroxybenzoyl hexyl benzoate,Uvinul A Plus กันแดด UVA รุ่นใหม่ เสถียรสูง,Safe
+dimethicone,ซิลิโคนช่วยให้เนื้อเนียนลื่น แต่อาจสะสมและอุดตันรูขุมขน,Warning
+dipeptide-2,เปปไทด์ช่วยลดถุงใต้ตา,Safe
+dipropylene glycol,ตัวทำละลายและดึงน้ำเข้าผิว อ่อนโยนกว่า PG,Safe
+disodium edta,สารจับประจุโลหะ ช่วยให้ครีมไม่เสีย/เปลี่ยนสี,Safe
+disodium laureth sulfosuccinate,สารทำความสะอาดโมเลกุลใหญ่ อ่อนโยนกว่า SLS,Safe
+dmdm hydantoin,สารกันเสียที่ปล่อยสารฟอร์มาลดีไฮด์ (ก่อมะเร็ง/แพ้),Danger
+elastin,อีลาสติน ให้ความยืดหยุ่นเคลือบผิว,Safe
+ethylhexyl methoxycinnamate,สารกันแดด UVB ยอดฮิต (อาจรบกวนฮอร์โมน),Warning
+ethylhexyl palmitate,สารให้ความนุ่มลื่น (เสี่ยงอุดตันปานกลาง),Warning
+ethylhexyl salicylate,สารกันแดด UVB ช่วยละลายสารกันแดดตัวอื่น,Safe
+ethylhexylglycerin,สารบำรุงผิวที่ช่วยบูสต์ประสิทธิภาพสารกันเสีย,Safe
+eucalyptus globulus leaf oil,น้ำมันยูคาลิปตัส (เสี่ยงระคายเคืองสูง),Warning
+eugenol,สารประกอบน้ำหอม (มีโอกาสทำให้ผิวแพ้),Warning
+ferulic acid,สารต้านอนุมูลอิสระ มักใช้คู่กับวิตามินซี,Safe
+formaldehyde,สารกันเสีย เสี่ยงก่อมะเร็ง,Danger
+fragrance,น้ำหอมสังเคราะห์ เสี่ยงต่อการแพ้และระคายเคืองสูง,Warning
+galactomyces ferment filtrate,พิเทร่า (ยีสต์หมัก) ผิวกระจ่างใส รูขุมขนกระชับ,Safe
+geraniol,สารให้ความหอม (เสี่ยงก่อให้เกิดภูมิแพ้ผิวหนัง),Warning
+ginkgo biloba leaf extract,สารสกัดใบแปะก๊วย ฟื้นฟูเซลล์ผิว,Safe
+gluconolactone,PHA ผลัดเซลล์ผิวพร้อมกักเก็บน้ำ อ่อนโยนสุดๆ,Safe
+glutathione,กลูตาไธโอน สารต้านอนุมูลอิสระชั้นเยี่ยม,Safe
+glycerin,สารกักเก็บความชุ่มชื้น ดึงน้ำเข้าสู่ผิว,Safe
+glycolic acid,AHA ผลัดเซลล์ผิว ลดรอยดำ (อาจระคายเคืองถ้าเข้มข้นสูง),Safe
+glycyrrhiza glabra root extract,สารสกัดชะเอมเทศ ลดรอยดำ รอยแดง กระจ่างใส,Safe
+hamamelis virginiana water,วิชฮาเซล กระชับรูขุมขน (อาจมีแอลกอฮอล์ผสม),Warning
+helianthus annuus seed oil,น้ำมันเมล็ดทานตะวัน เสริมเกราะป้องกันผิว,Safe
+hepes,สารบัฟเฟอร์ คุมค่า pH ให้เสถียร,Safe
+homosalate,สารกันแดด UVB (เสี่ยงรบกวนฮอร์โมน/ระคายเคือง),Warning
+hyaluronic acid,เติมความชุ่มชื้น อิ่มน้ำ ลดริ้วรอยร่องตื้น,Safe
+hydrocortisone,ยาสเตียรอยด์ชนิดอ่อน (หากใช้ระยะยาวโดยไม่มีแพทย์สั่งผิวจะบาง),Danger
+hydrolyzed collagen,คอลลาเจนสกัด ซึมได้ดีขึ้น ให้ผิว/ผมนุ่ม,Safe
+hydrolyzed hyaluronic acid,ไฮยาโมเลกุลจิ๋ว ซึมซาบไวสุด ลดริ้วรอย,Safe
+hydroquinone,ไฮโดรควิโนน สารหน้าขาวไว ห้ามใช้ในเครื่องสำอางทั่วไป (ทำให้หน้าด่าง),Danger
+hydroquinone monobenzyl ether,สารฟอกสีผิว (ทำลายเซลล์สร้างเม็ดสีถาวร ทำให้ด่างขาว),Danger
+hydroxyethylcellulose,สารเพิ่มความหนืด มักเจอในเซรั่ม,Safe
+imidazolidinyl urea,สารกันเสียปล่อยฟอร์มาลดีไฮด์ (เสี่ยงแพ้สูง),Danger
+iron oxides,แม่สีธรรมชาติ (สีแดง/เหลือง/ดำในลิปสติกและรองพื้น),Safe
+isobutylparaben,พาราเบนชนิดที่เสี่ยงรบกวนฮอร์โมนสูง (ห้ามใช้ในยุโรป),Danger
+isododecane,ตัวทำละลายที่ระเหยไว (มักเจอในลิปแมตต์),Safe
+isohexadecane,ทำให้เนื้อสัมผัสเบาสบาย เกลี่ยง่าย,Safe
+isopropyl myristate,ทำให้เนื้อครีมซึมไว แต่ เสี่ยงอุดตันรูขุมขนสูงมาก,Warning
+isopropyl palmitate,ทำให้เนื้อครีมนุ่ม แต่ เสี่ยงอุดตันรูขุมขนสูง,Warning
+isopropylparaben,พาราเบนชนิดที่เสี่ยงรบกวนฮอร์โมนสูง (ห้ามใช้ในยุโรป),Danger
+kaolin,โคลนขาว ดูดซับความมัน (เมคอัพ/มาส์ก),Safe
+keratin,เคราติน บำรุงเส้นผมให้แข็งแรง,Safe
+ketoconazole,ยาฆ่าเชื้อรา (เป็นยาควบคุม ห้ามนำมาผสมในสกินแคร์),Danger
+kojic acid,สารสกัดจากเห็ด/ข้าวหมัก ช่วยให้ผิวขาว (อาจระคายเคือง),Warning
+lactic acid,AHA อ่อนโยน ผลัดเซลล์ผิว เพิ่มความชุ่มชื้น ยังใช้ปรับสมดุล pH ได้ด้วย,Safe
+lactobacillus ferment,โปรไบโอติก ปรับสมดุลแบคทีเรียบนผิว,Safe
+lactobionic acid,PHA โมเลกุลใหญ่พิเศษ ไม่ระคายเคือง ต้านริ้วรอย,Safe
+laureth-7,สารประสานน้ำและน้ำมัน (มักมาเป็นชุดกับตัวบน),Safe
+lauric acid,กรดไขมันในสบู่/โฟม (ทำความสะอาดดีแต่อาจทำให้ผิวแห้ง),Warning
+lauryl glucoside,สารทำความสะอาดจากธรรมชาติ ไม่ทำร้ายผิว,Safe
+lavandula angustifolia oil,น้ำมันหอมระเหยลาเวนเดอร์ (เสี่ยงแพ้/ระคายเคือง),Warning
+lead,สารตะกั่ว (มักปนเปื้อนในลิปสติกปลอม) อันตรายสะสม,Danger
+lecithin,ช่วยให้สารบำรุงซึมเข้าสู่ผิวได้ลึกและดีขึ้น,Safe
+limonene,สารแต่งกลิ่นหอม (ซีตรัส) เสี่ยงระคายเคือง,Warning
+linalool,สารแต่งกลิ่นหอม เสี่ยงระคายเคือง/ภูมิแพ้,Warning
+macadamia ternifolia seed oil,น้ำมันแมคคาเดเมีย ซึมลึก บำรุงผิวแห้ง,Safe
+madecassic acid,สารสกัดจากใบบัวบก ลดการระคายเคือง กระตุ้นคอลลาเจน,Safe
+magnesium aluminum silicate,โคลนขาวธรรมชาติ ช่วยเพิ่มความข้นเนื้อครีม,Safe
+magnesium ascorbyl phosphate,อนุพันธ์วิตามินซี ช่วยเรื่องความกระจ่างใส,Safe
+malic acid,AHA จากแอปเปิ้ล ช่วยให้ผิวกระจ่างใส,Safe
+mandelic acid,AHA โมเลกุลใหญ่ อ่อนโยนสุด เหมาะกับผิวแพ้ง่าย,Safe
+mangifera indica seed butter,แมงโก้บัตเตอร์ ให้ความชุ่มชื้น,Safe
+melaleuca alternifolia leaf oil,น้ำมันทีทรีรักษาสิว (อาจระคายเคืองถ้าเข้มข้นสูง),Warning
+mentha piperita oil,น้ำมันเปปเปอร์มินต์ ให้ความเย็น (เสี่ยงระคายเคือง),Warning
+mercury,สารปรอท สารอันตรายร้ายแรง หน้าขาวไวแต่ทำลายระบบประสาทและไต,Danger
+methylchloroisothiazolinone,สารกันเสีย (CMIT) มักใช้คู่ MIT เสี่ยงแพ้รุนแรง,Danger
+methyldibromo glutaronitrile,สารกันเสีย (ถูกแบนในยุโรปเพราะก่อให้เกิดอาการแพ้รุนแรง),Danger
+methylisothiazolinone,สารกันเสีย (MIT) เสี่ยงก่อให้เกิดภูมิแพ้ผิวหนังรุนแรง,Danger
+methylparaben,สารกันเสียกลุ่มพาราเบน เสี่ยงต่อการแพ้สะสมและรบกวนฮอร์โมน,Danger
+mica,แร่ธรรมชาติช่วยสร้างความประกาย/วิ้งค์ (มักเจอในแป้งและอายแชโดว์),Safe
+mineral oil,น้ำมันแร่ กักเก็บความชุ่มชื้นดี แต่อาจอุดตันผิวสำหรับคนเป็นสิว,Warning
+minoxidil,ยาปลูกผม (เป็นยาควบคุม ห้ามผสมในเครื่องสำอางหรือสกินแคร์ทั่วไป),Danger
+morus alba root extract,สารสกัดรากมัลเบอร์รี่ ช่วยให้ผิวกระจ่างใส,Safe
+myristic acid,สารทำความสะอาดในโฟมล้างหน้า (อาจทำให้ผิวแห้งตึง),Warning
+myristoyl pentapeptide-17,เปปไทด์เร่งขนตา/ขนคิ้วให้ยาวขึ้น,Safe
+niacinamide,วิตามินบี 3 ลดรอยดำ รอยแดง ควบคุมความมัน,Safe
+octinoxate,สารกันแดดเคมี (เสี่ยงระคายเคืองและทำลายปะการัง),Warning
+octisalate,สารกันแดด UVB มักใช้คู่กับสารอื่น,Safe
+octocrylene,สารกันแดดเคมี (อาจทำให้แสบตาหรือระคายเคือง),Warning
+olea europaea fruit oil,น้ำมันมะกอก ชุ่มชื้นสูง (เสี่ยงอุดตันคนผิวมัน),Warning
+oxybenzone,สารกันแดดเคมี (อาจรบกวนฮอร์โมนและทำลายปะการัง),Warning
+p-phenylenediamine,PPD มักพบในยาย้อมผม (สารก่อภูมิแพ้รุนแรง),Danger
+palmitoyl pentapeptide-4,Matrixyl ช่วยเรื่องความยืดหยุ่นของผิว,Safe
+palmitoyl tetrapeptide-7,เปปไทด์ลดการอักเสบและลดริ้วรอย,Safe
+palmitoyl tripeptide-1,เปปไทด์กระตุ้นการสร้างคอลลาเจน,Safe
+panax ginseng root extract,สารสกัดโสม กระตุ้นการไหลเวียนเลือด หน้าใส,Safe
+panthenol,วิตามินบี 5 ฟื้นฟูเกราะป้องกันผิว,Safe
+pantothenic acid,วิตามินบี 5 (แบบกรด) ลดความมัน ลดสิว,Safe
+parfum,น้ำหอมสังเคราะห์ (อีกชื่อหนึ่ง) เสี่ยงต่อการระคายเคือง,Warning
+peg-100 stearate,สารประสานน้ำกับน้ำมัน (เสี่ยงปนเปื้อนหากไม่ได้มาตรฐาน),Warning
+peg-40 hydrogenated castor oil,ตัวประสานน้ำกับน้ำมัน อาจปนเปื้อนสารอันตราย,Warning
+persea gratissima oil,น้ำมันอะโวคาโด ฟื้นฟูผิวแห้งกร้าน,Safe
+phenoxyethanol,สารกันเสียที่ค่อนข้างปลอดภัย แต่อาจระคายเคืองในผิวที่บอบบางมาก,Warning
+phenyl trimethicone,ซิลิโคนให้ความเงางาม (มักเจอในรองพื้น/ครีมผม),Warning
+phthalates,ตัวทำละลายน้ำหอม รบกวนระบบฮอร์โมน,Danger
+phytosphingosine,ไขมันธรรมชาติ ช่วยลดสิวและเสริมชั้นผิว,Safe
+piroctone olamine,รักษารังแคและเชื้อรา (แชมพู/ยาสระผม),Safe
+polyacrylamide,สารเพิ่มความหนืด สร้างฟิล์มเคลือบผิว,Safe
+polyaminopropyl biguanide,PHMB สารกันเสีย (ถูกแบนในบางประเทศเนื่องจากเสี่ยงก่อมะเร็ง),Danger
+polyglutamic acid,กักเก็บความชุ่มชื้นได้ดีกว่าไฮยาลูรอนิกหลายเท่า,Safe
+polyhydroxy acid,PHA ผลัดเซลล์ผิวอย่างอ่อนโยนมาก ไม่ไวต่อแสง,Safe
 polyquaternium-10,สารเคลือบเส้นผม ลดไฟฟ้าสถิต,Safe
-behentrimonium chloride,สารบำรุงในครีมนวดผม (ระคายเคืองถ้าโดนผิวหน้านาน),Warning
-cetrimonium chloride,สารกันไฟฟ้าสถิตในครีมนวดผม (เสี่ยงระคายเคืองผิว),Warning
+polyquaternium-7,สารปรับสภาพผม/ผิว ให้ความลื่น (แชมพู/ครีมอาบน้ำ),Safe
+polysorbate 20,ตัวทำละลายน้ำกับน้ำมัน (มักเจอในโทนเนอร์/คลีนซิ่ง),Safe
+portulaca oleracea extract,สารสกัดผักเบี้ยใหญ่ ปลอบประโลมผิว ลดอักเสบ,Safe
+potassium hydroxide,ด่างเข้มข้น ใช้ในสบู่/คลีนเซอร์ (อาจทำให้ผิวแห้ง),Warning
+potassium sorbate,สารกันเสียจากธรรมชาติ อ่อนโยน,Safe
+propolis extract,สารสกัดพรอพอลิส (รังผึ้ง) ต้านแบคทีเรียสิว,Safe
+propylene glycol,สารดึงความชุ่มชื้นและตัวทำละลาย (พบบ่อยมาก),Safe
+propylparaben,สารกันเสียกลุ่มพาราเบน เสี่ยงแพ้และระคายเคืองสูง,Danger
+prunus amygdalus dulcis oil,น้ำมันอัลมอนด์ อ่อนโยน บำรุงผิว,Safe
+pullulan,สารให้ความตึงกระชับผิวชั่วคราว,Safe
+punica granatum extract,สารสกัดทับทิม ต้านอนุมูลอิสระ,Safe
+pycnogenol,สารสกัดเปลือกสน ลดฝ้ากระและปรับสีผิวให้สม่ำเสมอ,Safe
+pyridoxine hcl,วิตามินบี 6 ลดความมันและสิว,Safe
+quaternium-15,สารกันเสียปล่อยฟอร์มาลดีไฮด์ (เสี่ยงแพ้และอันตราย),Danger
+resorcinol,สารลอกผิว มักพบในยาย้อมผมและยารักษาสิว (กวนระบบฮอร์โมน),Danger
+resveratrol,สารสกัดจากองุ่น ต้านริ้วรอยและอนุมูลอิสระ,Safe
+retinoic acid,กรดวิตามินเอ (เรตินอยด์เข้มข้น) ห้ามใช้ในเครื่องสำอาง (ผิวลอกและไวต่อแสง),Danger
+retinol,วิตามินเอ ลดริ้วรอย (ห้ามใช้ในสตรีมีครรภ์/ผิวระคายเคืองง่าย),Warning
+retinyl palmitate,อนุพันธ์วิตามินเอ อ่อนโยนกว่า Retinol,Warning
+rhodamine b,สีสังเคราะห์ (เสี่ยงก่อมะเร็ง ห้ามใช้ผสมในสกินแคร์),Danger
+rosa canina fruit oil,น้ำมันโรสฮิป ลดรอยสิวและริ้วรอย,Safe
+rosmarinus officinalis extract,สารสกัดโรสแมรี่ ต้านเชื้อแบคทีเรีย,Safe
+rosmarinus officinalis leaf extract,สารสกัดโรสแมรี่ ต้านอนุมูลอิสระและปลอบประโลมผิว,Safe
+rosmarinus officinalis leaf oil,น้ำมันโรสแมรี่ (ระคายเคืองผิวบอบบาง),Warning
+salicylic acid,BHA ช่วยผลัดเซลล์ผิว สลายสิ่งอุดตันในรูขุมขน (ลดสิว),Safe
+salix alba bark extract,สารสกัดเปลือกวิลโลว์ BHA ธรรมชาติ อ่อนโยนกว่ากรดซาลิไซลิก,Safe
+sclerotium gum,สารสร้างเนื้อเจลและให้ความชุ่มชื้น,Safe
+silica,ผงช่วยดูดซับความมันส่วนเกินบนใบหน้า (มักเจอในแป้งพัฟ),Safe
+silk amino acids,กรดอะมิโนจากรังไหม บำรุงผิวและผมนุ่มสลวย,Safe
+simmondsia chinensis seed oil,โจโจ้บาออยล์ คุมมัน ไม่อุดตันรูขุมขน,Safe
+snail secretion filtrate,เมือกหอยทาก ซ่อมแซมผิวและให้ความชุ่มชื้น,Safe
+sodium ascorbyl phosphate,อนุพันธ์วิตามินซี อ่อนโยน เสถียร ลดสิวได้,Safe
+sodium benzoate,สารกันเสียระดับ Food Grade อ่อนโยน,Safe
+sodium c14-16 olefin sulfonate,สารทำความสะอาดฟองเยอะ (ทำให้ผิวแห้งตึงมาก),Warning
+sodium citrate,เกลือของกรดซิตริก ช่วยปรับค่า pH,Safe
+sodium cocoyl glutamate,สารทำความสะอาดจากกรดอะมิโน อ่อนโยนมาก,Safe
+sodium cocoyl isethionate,สารทำความสะอาดฟองนุ่ม ไม่ทำร้ายเกราะป้องกันผิว,Safe
+sodium hyaluronate,ไฮยาลูรอนิคโมเลกุลเล็ก ซึมลึก เติมน้ำให้ผิว,Safe
+sodium hydroxide,ด่างเข้มข้น ใช้ปรับ pH (ถ้าผสมไม่ดีจะกัดผิว),Warning
+sodium laureth sulfate,SLES สารทำความสะอาด อ่อนโยนกว่า SLS แต่ยังทำให้ผิวแห้ง,Warning
+sodium lauroyl sarcosinate,สารทำความสะอาด อ่อนโยนกว่ากลุ่ม SLS,Safe
+sodium lauryl sulfate,SLS สารทำความสะอาด (โฟมล้างหน้า) ทำให้ผิวแห้งตึง,Warning
+sodium methyl cocoyl taurate,สารทำความสะอาดฟองนุ่ม ปลอดภัย,Safe
+sodium pca,สารให้ความชุ่มชื้นที่มีอยู่แล้วตามธรรมชาติในผิว,Safe
 sodium phytate,สารจับประจุโลหะจากธรรมชาติ ปลอดภัยมาก,Safe
-butyloctyl salicylate,ตัวทำละลายที่ช่วยเพิ่มประสิทธิภาพสารกันแดด,Safe
+sorbic acid,สารกันเสียจากธรรมชาติ ปลอดภัย,Safe
+spironolactone,ยาลดฮอร์โมนชาย/ขับปัสสาวะ (ห้ามใช้ผสมในครีมรักษาสิว),Danger
+squalane,เติมความชุ่มชื้น ล็อคน้ำในผิว ไม่อุดตัน,Safe
+stearic acid,กรดไขมันสร้างเนื้อครีม (อาจทำให้อุดตันในผู้ที่มีผิวมัน),Warning
+stearyl alcohol,แอลกอฮอล์ชนิดดี เคลือบผิวไม่ให้เสียความชุ่มชื้น,Safe
+synthetic fluorphlogopite,ไมก้าสังเคราะห์ ให้ความวิ้งค์/ชิมเมอร์ ปลอดภัย,Safe
+talc,แร่ทัลก์ ช่วยให้เนื้อแป้งเนียนนุ่มลื่น (ผิวแพ้ง่ายมากควรระวัง),Warning
+tartaric acid,AHA จากผลไม้ ช่วยปรับสมดุล pH และผลัดผิว,Safe
+tea-lauryl sulfate,สารทำความสะอาด (ระคายเคืองผิวและตา),Warning
+tetrahexyldecyl ascorbate,อนุพันธ์วิตามินซีละลายในน้ำมัน อ่อนโยนมาก,Safe
+tetrasodium edta,สารรักษาความคงตัวของผลิตภัณฑ์,Safe
+theobroma cacao seed butter,โกโก้บัตเตอร์ ชุ่มชื้นสูง (เสี่ยงอุดตัน),Warning
+thimerosal,สารกันเสียที่มีปรอทเป็นส่วนประกอบ (ห้ามใช้ในเครื่องสำอางเด็ดขาด),Danger
+thioctic acid,กรดอัลฟ่าไลโปอิก (ALA) ต้านริ้วรอยระดับเซลล์,Safe
+tin oxide,แร่ธาตุให้ประกายมุก มักผสมกับไมก้า,Safe
 tinosorb m,(Methylene Bis-Benzotriazolyl Tetramethylbutylphenol) กันแดดเสถียรสูง,Safe
+titanium dioxide,สารกันแดดและสารให้สีขาว (มักเจอในแป้งพัฟและกันแดด),Safe
+tocopherol,วิตามินอี ต้านอนุมูลอิสระ ปกป้องผิวจากความชรา,Safe
+tocopheryl acetate,อนุพันธ์วิตามินอี ต้านอนุมูลอิสระ เสถียรสูง,Safe
+toluene,ทินเนอร์ มักพบในน้ำยาทาเล็บ (สูดดมแล้วอันตรายต่อระบบประสาท),Danger
+tranexamic acid,ลดรอยแดง รอยดำ ฝ้าแดดฝังลึก,Safe
+trehalose,น้ำตาลธรรมชาติ ปกป้องเซลล์ผิวจากความแห้ง,Safe
+triclocarban,สารต้านแบคทีเรีย (สบู่ก้อน) รบกวนฮอร์โมน,Danger
+triclosan,สารยับยั้งแบคทีเรีย เสี่ยงสะสมและรบกวนฮอร์โมน,Danger
+triethanolamine,สารปรับค่า pH (ถ้าเข้มข้นสูงหรือทิ้งไว้นานอาจระคายเคือง),Warning
+tromethamine,สารปรับค่า pH ให้คงที่,Safe
+ubiquinone,โคเอนไซม์คิวเทน (CoQ10) ลดริ้วรอย,Safe
+ultramarines,เม็ดสีน้ำเงิน/ม่วง/ชมพู ปลอดภัย,Safe
+urea,ยูเรีย ให้ความชุ่มชื้นและผลัดเซลล์ผิว,Safe
 uvinul t 150,(Ethylhexyl Triazone) กันแดด UVB ประสิทธิภาพสูงสุด,Safe
+vitis vinifera seed extract,สารสกัดเมล็ดองุ่น ต้านริ้วรอย,Safe
+water,น้ำบริสุทธิ์ ตัวทำละลายหลักในผลิตภัณฑ์,Safe
+xanthan gum,สารเพิ่มความหนืดจากธรรมชาติ ปลอดภัย,Safe
+zinc oxide,สารกันแดดแบบสะท้อนแสง ปลอดภัยต่อผิวแพ้ง่าย,Safe
+zinc pca,ลดความมันส่วนเกินและมีฤทธิ์ฆ่าเชื้อแบคทีเรียสิว,Safe
