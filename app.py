@@ -4,6 +4,7 @@ from PIL import Image, ImageEnhance, ImageDraw
 import pytesseract
 import re
 import difflib
+import base64
 
 # ==========================================
 # 1. ตั้งค่าหน้าเพจ 
@@ -11,7 +12,63 @@ import difflib
 st.set_page_config(page_title="SkinScan AI", page_icon="woman_5362023.png", layout="wide")
 
 # ==========================================
-# 2. โหลดฐานข้อมูล (ปรับชื่อกลับเป็น database.csv ให้ตรงกับไฟล์จริง)
+# 2. ฟังก์ชันแปลงรูปพื้นหลัง background.png ให้แสดงผลได้ 100%
+# ==========================================
+def set_bg_local(image_file):
+    try:
+        with open(image_file, "rb") as f:
+            encoded_string = base64.b64encode(f.read()).decode()
+        css = f"""
+        <style>
+        /* ตั้งค่าลายพื้นหลังสีชมพูลายเครื่องสำอาง (รองรับไฟล์ .png) */
+        .stApp {{
+            background-image: url("data:image/png;base64,{encoded_string}");
+            background-repeat: repeat;
+            background-size: 350px;
+        }}
+        
+        /* ทำกล่องเนื้อหาหลักทั้งหมดให้อยู่บนพื้นหลังขาวโปร่งแสง */
+        .main .block-container {{
+            background-color: rgba(255, 255, 255, 0.92);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }}
+        
+        /* บังคับสีตัวหนังสือให้คมชัดอ่านง่าย */
+        h1, h2, h3, h4, h5, h6, p, span, label {{
+            color: #2c3e50 !important;
+        }}
+        
+        /* ตกแต่งปุ่มกดสีชมพูพาสเทล */
+        .stButton>button {{
+            border-radius: 20px;
+            font-weight: bold;
+            border: none;
+            background-color: #ff9eaa;
+            color: white !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }}
+        
+        .stButton>button:hover {{
+            transform: translateY(-2px);
+            background-color: #ff7f90;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }}
+        </style>
+        """
+        st.markdown(css, unsafe_allow_html=True)
+    except FileNotFoundError:
+        pass
+
+# เรียกใช้ฟังก์ชันใส่พื้นหลังด้วยไฟล์ background.png
+set_bg_local('background.png')
+
+# ==========================================
+# 3. โหลดฐานข้อมูล
 # ==========================================
 @st.cache_data
 def load_data():
@@ -20,13 +77,13 @@ def load_data():
         df['ingredient'] = df['ingredient'].astype(str).str.lower().str.strip()
         return df
     except FileNotFoundError:
-        st.error("❌ ไม่พบไฟล์ 'database.csv' กรุณาตรวจสอบชื่อไฟล์ในระบบ")
+        st.error("❌ ไม่พบไฟล์ 'database.csv'")
         return pd.DataFrame()
 
 df_db = load_data()
 
 # ==========================================
-# 3. ฟังก์ชันวิเคราะห์ส่วนผสม (ค้นหาครบถ้วน + พิกัดไฮไลต์)
+# 4. ฟังก์ชันวิเคราะห์ส่วนผสม (พร้อมพิกัดไฮไลต์แม่นยำ)
 # ==========================================
 def analyze_ingredients_with_boxes(processed_img, df):
     data = pytesseract.image_to_data(processed_img, output_type=pytesseract.Output.DATAFRAME)
@@ -103,7 +160,7 @@ def analyze_ingredients_with_boxes(processed_img, df):
         return pd.DataFrame(), data
 
 # ==========================================
-# 4. หน้าจอหลัก (UI)
+# 5. หน้าจอหลัก (UI)
 # ==========================================
 col_icon, col_title = st.columns([1, 9])
 with col_icon:
@@ -140,7 +197,7 @@ if img_file is not None:
             result_df = pd.DataFrame()
 
     if result_df.empty:
-        st.warning("สแกนพบภาพ แต่ไม่พบสารสำคัญที่ตรงกับฐานข้อมูล แนะนำให้ถ่ายรูปในมุมที่สว่างและชัดเจนขึ้นครับ")
+        st.warning("สแกนพบภาพ แต่ไม่พบสารสำคัญที่ตรงกับฐานข้อมูล แนะนำให้ถ่ายรูปในมุมที่สว่างและชัดเจนขึ้น")
     else:
         st.success(f"✅ ตรวจพบสารสำคัญที่รู้จัก {len(result_df)} ชนิด")
 
