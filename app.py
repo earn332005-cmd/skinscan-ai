@@ -151,7 +151,7 @@ if img_file is not None:
                 width=4
             )
             
-            st.image(draw_image, caption=لتควบคุมตำแหน่ง: f"ตำแหน่งของสาร: {selected_ingredient}", use_container_width=True)
+            st.image(draw_image, caption=f"ตำแหน่งของสาร: {selected_ingredient}", use_container_width=True)
             st.caption("🔴 กรอบสีแดงบนรูปภาพคือตำแหน่งที่ AI ตรวจพบสารตัวนี้ครับ")
 
         with col_res:
