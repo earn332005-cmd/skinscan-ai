@@ -60,7 +60,13 @@ def analyze_ingredients(extracted_text, df):
 # ==========================================
 # 5. หน้าจอหลัก (UI)
 # ==========================================
-st.title("🌿 SkinScan AI")
+# --- เปลี่ยนไอคอนตรงหัวเว็บ ---
+col_icon, col_title = st.columns([1, 9])
+with col_icon:
+    st.image("woman_5362023.png", width=65)
+with col_title:
+    st.title("SkinScan AI")
+
 st.markdown("**ระบบสแกนส่วนผสมเครื่องสำอางและสกินแคร์อัจฉริยะ**")
 
 # --- เพิ่มระบบให้เลือก 2 แท็บ (ถ่ายรูปสด / อัปโหลดรูป) ---
