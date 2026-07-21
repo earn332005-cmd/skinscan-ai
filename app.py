@@ -26,7 +26,7 @@ def load_data():
 df_db = load_data()
 
 # ==========================================
-# 3. ฟังก์ชันวิเคราะห์ส่วนผสม (พร้อมเก็บพิกัดคำสำหรับไฮไลต์)
+# 3. ฟังก์ชันวิเคราะห์ส่วนผสม (ปรับปรุงใหม่ให้อ่านเจอครบทุกตัว)
 # ==========================================
 def analyze_ingredients_with_boxes(processed_img, df):
     # ใช้ pytesseract ดึงข้อมูลพิกัด (Bounding Box) ของแต่ละคำ
@@ -54,32 +54,53 @@ def analyze_ingredients_with_boxes(processed_img, df):
     db_ingredients = df['ingredient'].tolist()
     found_ingredients = []
     
-    # วนลูปเช็กคำในตาราง OCR ทีละคำ/วลี เพื่อเก็บพิกัด
+    # 1. กวาดหาแบบภาพรวมประโยคยาวก่อน (Exact Match จากฐานข้อมูล)
+    for index, row in df.iterrows():
+        ing_name = str(row['ingredient']).strip().lower()
+        if len(ing_name) > 2 and ing_name in text_clean:
+            # หาพิกัดจำลองจากคำแรกที่เจอใน OCR data
+            matched_row = data[data['text'].str.lower().str.contains(ing_name[:5], na=False)]
+            if not matched_row.empty:
+                r = matched_row.iloc[0]
+                box_coords = (r['left'], r['top'], r['width'], r['height'])
+            else:
+                box_coords = (10, 10, 50, 20) # พิกัดสำรองกรณีหาไม่เจอ
+                
+            found_ingredients.append({
+                'Ingredient': ing_name.title(),
+                'Function': row['function'],
+                'Risk': row['risk_level'],
+                'box': box_coords
+            })
+
+    # 2. วนลูปเก็บพิกัดรายคำเพิ่มเติมด้วย Fuzzy Matching (ลดเกณฑ์เหลือ 0.75 เพื่อให้จับคำเพี้ยนได้ดีขึ้น)
     for i, row_ocr in data.iterrows():
         word_token = str(row_ocr['text']).strip().lower()
         if len(word_token) <= 2:
             continue
             
-        matches = difflib.get_close_matches(word_token, db_ingredients, n=1, cutoff=0.85)
+        matches = difflib.get_close_matches(word_token, db_ingredients, n=1, cutoff=0.75)
         if matches:
             matched_ing = matches[0]
             db_row = df[df['ingredient'] == matched_ing].iloc[0]
             
-            found_ingredients.append({
-                'Ingredient': matched_ing.title(),
-                'Function': db_row['function'],
-                'Risk': db_row['risk_level'],
-                'box': (row_ocr['left'], row_ocr['top'], row_ocr['width'], row_ocr['height'])
-            })
+            # เช็คว่ามีในรายการหรือยัง ถ้ายังให้เพิ่มเข้าไปพร้อมพิกัดจริง
+            existing_ings = [x['Ingredient'].lower() for x in found_ingredients]
+            if matched_ing not in existing_ings:
+                found_ingredients.append({
+                    'Ingredient': matched_ing.title(),
+                    'Function': db_row['function'],
+                    'Risk': db_row['risk_level'],
+                    'box': (row_ocr['left'], row_ocr['top'], row_ocr['width'], row_ocr['height'])
+                })
 
     if found_ingredients:
         result_df = pd.DataFrame(found_ingredients)
-        # ลบชื่อที่ซ้ำ แต่เก็บพิกัดตัวแรกไว้
         result_df = result_df.drop_duplicates(subset=['Ingredient']).reset_index(drop=True)
         return result_df, data
     else:
         return pd.DataFrame(), data
-
+    
 # ==========================================
 # 4. หน้าจอหลัก (UI)
 # ==========================================
