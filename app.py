@@ -8,6 +8,46 @@ import difflib
 # ==========================================
 # 1. ตั้งค่าหน้าเพจ 
 # ==========================================
+# ==========================================
+# 0. ตกแต่งธีมและพื้นหลังแอป (Custom CSS)
+# ==========================================
+st.markdown("""
+    <style>
+    /* ปรับพื้นหลังหลักของแอปให้มีความละมุนโทนพาสเทล/คลีนๆ */
+    .stApp {
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    }
+    
+    /* ตกแต่งกล่องข้อความอธิบาย (Info / Warning / Success) ให้มีมุมโค้งมนและเงาลอย */
+    div.stAlert {
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* ปรับแต่งปุ่มกดให้มีความโค้งมนและดูทันสมัย */
+    .stButton>button {
+        border-radius: 20px;
+        font-weight: bold;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    /* เอฟเฟกต์เวลาเอาเมาส์ชี้ปุ่ม */
+    .stButton>button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    /* ปรับแต่งกล่อง Expander ผลลัพธ์ความเสี่ยง */
+    .streamlit-expanderHeader {
+        background-color: white;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 st.set_page_config(page_title="SkinScan AI", page_icon="woman_5362023.png", layout="wide")
 
 # ==========================================
@@ -26,14 +66,12 @@ def load_data():
 df_db = load_data()
 
 # ==========================================
-# 3. ฟังก์ชันวิเคราะห์ส่วนผสม (ปรับปรุงใหม่ให้อ่านเจอครบทุกตัว)
+# 3. ฟังก์ชันวิเคราะห์ส่วนผสม (แก้พิกัดไฮไลต์ไม่ให้หลุดขอบ)
 # ==========================================
 def analyze_ingredients_with_boxes(processed_img, df):
-    # ใช้ pytesseract ดึงข้อมูลพิกัด (Bounding Box) ของแต่ละคำ
     data = pytesseract.image_to_data(processed_img, output_type=pytesseract.Output.DATAFRAME)
     data = data[data.text.notnull() & (data.text.str.strip() != "")]
     
-    # รวมข้อความทั้งหมดเพื่อเอามาเช็กภาพรวม
     full_text = " ".join(data['text'].tolist())
     text_clean = full_text.lower()
     
@@ -54,38 +92,27 @@ def analyze_ingredients_with_boxes(processed_img, df):
     db_ingredients = df['ingredient'].tolist()
     found_ingredients = []
     
-    # 1. กวาดหาแบบภาพรวมประโยคยาวก่อน (Exact Match จากฐานข้อมูล)
-    for index, row in df.iterrows():
-        ing_name = str(row['ingredient']).strip().lower()
-        if len(ing_name) > 2 and ing_name in text_clean:
-            # หาพิกัดจำลองจากคำแรกที่เจอใน OCR data
-            matched_row = data[data['text'].str.lower().str.contains(ing_name[:5], na=False)]
-            if not matched_row.empty:
-                r = matched_row.iloc[0]
-                box_coords = (r['left'], r['top'], r['width'], r['height'])
-            else:
-                box_coords = (10, 10, 50, 20) # พิกัดสำรองกรณีหาไม่เจอ
-                
-            found_ingredients.append({
-                'Ingredient': ing_name.title(),
-                'Function': row['function'],
-                'Risk': row['risk_level'],
-                'box': box_coords
-            })
-
-    # 2. วนลูปเก็บพิกัดรายคำเพิ่มเติมด้วย Fuzzy Matching (ลดเกณฑ์เหลือ 0.75 เพื่อให้จับคำเพี้ยนได้ดีขึ้น)
+    # วนลูปเช็กจากคำในภาพจริงเพื่อให้ได้พิกัด (Bounding Box) ที่ถูกต้องแม่นยำ
     for i, row_ocr in data.iterrows():
         word_token = str(row_ocr['text']).strip().lower()
         if len(word_token) <= 2:
             continue
             
-        matches = difflib.get_close_matches(word_token, db_ingredients, n=1, cutoff=0.75)
-        if matches:
-            matched_ing = matches[0]
+        # 1. เช็กแบบตรงตัว
+        matched_ing = None
+        if word_token in db_ingredients:
+            matched_ing = word_token
+        else:
+            # 2. เช็กแบบใกล้เคียง (Fuzzy Match)
+            matches = difflib.get_close_matches(word_token, db_ingredients, n=1, cutoff=0.75)
+            if matches:
+                matched_ing = matches[0]
+                
+        if matched_ing:
             db_row = df[df['ingredient'] == matched_ing].iloc[0]
-            
-            # เช็คว่ามีในรายการหรือยัง ถ้ายังให้เพิ่มเข้าไปพร้อมพิกัดจริง
             existing_ings = [x['Ingredient'].lower() for x in found_ingredients]
+            
+            # ถ้ายังไม่มีในลิสต์ ให้เพิ่มพร้อมพิกัดจริงจาก OCR ของคำนั้นๆ
             if matched_ing not in existing_ings:
                 found_ingredients.append({
                     'Ingredient': matched_ing.title(),
@@ -93,6 +120,27 @@ def analyze_ingredients_with_boxes(processed_img, df):
                     'Risk': db_row['risk_level'],
                     'box': (row_ocr['left'], row_ocr['top'], row_ocr['width'], row_ocr['height'])
                 })
+
+    # เพิ่มเติม: สำหรับสารสกัดยาวๆ ที่ OCR อาจจะตัดคำแยกกัน ให้กวาดหาภาพรวมเพิ่มเติม
+    for index, row in df.iterrows():
+        ing_name = str(row['ingredient']).strip().lower()
+        existing_ings = [x['Ingredient'].lower() for x in found_ingredients]
+        if len(ing_name) > 3 and ing_name in text_clean and ing_name not in existing_ings:
+            # หาคำแรกที่เป็นส่วนประกอบเพื่อดึงพิกัดใกล้เคียง
+            first_word = ing_name.split()[0]
+            matched_row = data[data['text'].str.lower().str.contains(first_word, na=False)]
+            if not matched_row.empty:
+                r = matched_row.iloc[0]
+                box_coords = (r['left'], r['top'], r['width'] * len(ing_name.split()), r['height'])
+            else:
+                box_coords = (50, 50, 100, 20) # พิกัดกันเหนียวตรงกลางรูป
+                
+            found_ingredients.append({
+                'Ingredient': ing_name.title(),
+                'Function': row['function'],
+                'Risk': row['risk_level'],
+                'box': box_coords
+            })
 
     if found_ingredients:
         result_df = pd.DataFrame(found_ingredients)
@@ -139,7 +187,7 @@ if img_file is not None:
             result_df = pd.DataFrame()
 
     if result_df.empty:
-        st.warning("สแกนพบภาพ แต่ไม่พบสารสำคัญที่ตรงกับฐานข้อมูล แนะนำให้ถ่ายรูปในมุมที่สว่างและชัดเจนขึ้นครับ")
+        st.warning("สแกนพบภาพ แต่ไม่พบสารสำคัญที่ตรงกับฐานข้อมูล แนะนำให้ถ่ายรูปในมุมที่สว่างและชัดเจนขึ้น")
     else:
         st.success(f"✅ ตรวจพบสารสำคัญที่รู้จัก {len(result_df)} ชนิด")
 
@@ -173,7 +221,7 @@ if img_file is not None:
             )
             
             st.image(draw_image, caption=f"ตำแหน่งของสาร: {selected_ingredient}", use_container_width=True)
-            st.caption("🔴 กรอบสีแดงบนรูปภาพคือตำแหน่งที่ AI ตรวจพบสารตัวนี้ครับ")
+            st.caption("🔴 กรอบสีแดงบนรูปภาพคือตำแหน่งที่ AI ตรวจพบสารตัวนั้นๆ")
 
         with col_res:
             st.markdown("### 📋 ผลการวิเคราะห์แยกตามระดับความเสี่ยง")
