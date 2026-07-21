@@ -25,16 +25,33 @@ def load_data():
 df_db = load_data()
 
 # ==========================================
-# 3. ฟังก์ชันวิเคราะห์ส่วนผสม
+# 3. ฟังก์ชันวิเคราะห์ส่วนผสม (อัปเดตระบบ Synonyms)
 # ==========================================
 def analyze_ingredients(extracted_text, df):
+    # คลีนข้อความ
     text_clean = extracted_text.replace('\n', ' ')
     text_clean = re.sub(r'[^\w\s\-/]', ' ', text_clean.lower())
     
+    # ดิกชันนารีคำพ้องความหมาย (เพิ่มคำศัพท์ในนี้ได้เลย)
+    synonyms = {
+        "aqua": "water",
+        "fragrance": "parfum",
+        "perfume": "parfum",
+        "aloe vera": "aloe barbadensis leaf extract",
+        "snail extract": "snail secretion filtrate",
+        "vitamin b3": "niacinamide",
+        "vitamin e": "tocopherol"
+    }
+    
+    # แปลงคำพ้องในข้อความที่สแกนได้ให้ตรงกับฐานข้อมูล
+    for word, replacement in synonyms.items():
+        # ใช้ regex เพื่อป้องกันการแทนที่คำที่ซ้อนทับกัน
+        text_clean = re.sub(fr'\b{word}\b', replacement, text_clean)
+        
     found_ingredients = []
     
     for index, row in df.iterrows():
-        ing_name = str(row['ingredient']).strip()
+        ing_name = str(row['ingredient']).strip().lower()
         if ing_name in text_clean:
             found_ingredients.append({
                 'Ingredient': ing_name.title(),
@@ -42,7 +59,13 @@ def analyze_ingredients(extracted_text, df):
                 'Risk': row['risk_level']
             })
             
-    return pd.DataFrame(found_ingredients)
+    # ลบข้อมูลที่ซ้ำซ้อนกรณีชื่อสารสกัดทับซ้อนกัน
+    if found_ingredients:
+        result_df = pd.DataFrame(found_ingredients)
+        result_df = result_df.drop_duplicates(subset=['Ingredient'])
+        return result_df
+    else:
+        return pd.DataFrame()
 
 # ==========================================
 # 4. หน้าจอหลัก (UI)
