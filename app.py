@@ -20,25 +20,31 @@ def set_bg_local(image_file):
             encoded_string = base64.b64encode(f.read()).decode()
         css = f"""
         <style>
-        /* ตั้งค่าลายพื้นหลังสีชมพูลายเครื่องสำอาง (รองรับไฟล์ .png) */
+        /* ตั้งค่าลายพื้นหลังสีชมพูลายเครื่องสำอาง */
         .stApp {{
             background-image: url("data:image/png;base64,{encoded_string}");
             background-repeat: repeat;
             background-size: 350px;
         }}
         
-        /* ทำกล่องเนื้อหาหลักทั้งหมดให้อยู่บนพื้นหลังขาวโปร่งแสง */
+        /* ทำกล่องเนื้อหาหลักทั้งหมดให้เป็น "สีขาวทึบ" เพื่อให้อ่านง่ายและไม่ลายตา */
         .main .block-container {{
-            background-color: rgba(255, 255, 255, 0.92);
+            background-color: #FFFFFF !important;
             border-radius: 20px;
             padding: 2.5rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
             margin-top: 2rem;
             margin-bottom: 2rem;
         }}
         
-        /* บังคับสีตัวหนังสือให้คมชัดอ่านง่าย */
-        h1, h2, h3, h4, h5, h6, p, span, label {{
+        /* ทำกล่องย่อย/Expander ภายในให้เป็นสีขาวทึบเช่นกัน */
+        div.stExpander, div.stAlert {{
+            background-color: #FFFFFF !important;
+            border-radius: 12px;
+        }}
+
+        /* บังคับสีตัวหนังสือให้เป็นสีเข้มเข้มคมชัด อ่านง่ายสบายตา */
+        h1, h2, h3, h4, h5, h6, p, span, label, div {{
             color: #2c3e50 !important;
         }}
         
