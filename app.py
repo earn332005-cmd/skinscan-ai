@@ -7,41 +7,51 @@ import difflib
 
 # ==========================================
 # 1. ตั้งค่าหน้าเพจ 
-# ==========================================
-# ==========================================
-# 0. ตกแต่งธีมและพื้นหลังแอป (Custom CSS)
-# ==========================================
+# =========================================
 st.markdown("""
     <style>
-    /* ปรับพื้นหลังหลักของแอปให้มีความละมุนโทนพาสเทล/คลีนๆ */
-    .stApp {
-        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    /* ใช้ฟังก์ชัน Dark/Light Mode ของ Streamlit โดยตรง เพื่อไม่ให้ตัวหนังสือกลืนกับพื้นหลัง */
+    @media (prefers-color-scheme: dark) {
+        .stApp {
+            background-color: #0e1117;
+            color: #ffffff;
+        }
     }
     
-    /* ตกแต่งกล่องข้อความอธิบาย (Info / Warning / Success) ให้มีมุมโค้งมนและเงาลอย */
+    @media (prefers-color-scheme: light) {
+        .stApp {
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 100%);
+            color: #31333F;
+        }
+    }
+
+    /* ตกแต่งกล่องข้อความอธิบาย (Info / Warning / Success) ให้ตัวหนังสือคมชัด ไม่กลืนกัน */
     div.stAlert {
         border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: none;
     }
     
-    /* ปรับแต่งปุ่มกดให้มีความโค้งมนและดูทันสมัย */
+    /* ปรับแต่งปุ่มกดให้สวยงามและตัวหนังสืออ่านง่าย */
     .stButton>button {
         border-radius: 20px;
         font-weight: bold;
         border: none;
+        background-color: #ffb6c1;
+        color: #ffffff;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
     }
     
-    /* เอฟเฟกต์เวลาเอาเมาส์ชี้ปุ่ม */
     .stButton>button:hover {
         transform: translateY(-2px);
+        background-color: #ff9eaa;
         box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        color: #ffffff;
     }
     
-    /* ปรับแต่งกล่อง Expander ผลลัพธ์ความเสี่ยง */
+    /* ปรับแต่งกล่อง Expander ผลลัพธ์ให้ตัดกับพื้นหลังอย่างชัดเจน */
     .streamlit-expanderHeader {
-        background-color: white;
         border-radius: 8px;
         font-weight: bold;
     }
