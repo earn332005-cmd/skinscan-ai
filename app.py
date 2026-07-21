@@ -7,7 +7,7 @@ import re
 # ==========================================
 # 1. ตั้งค่าหน้าเพจ (ปรับเป็น Wide ให้กว้างขึ้น)
 # ==========================================
-st.set_page_config(page_title="SkinScan AI", page_icon="🌿", layout="wide")
+st.set_page_config(page_title="SkinScan AI", page_icon="woman_5362023.png", layout="wide")
 
 # ==========================================
 # 2. แถบเมนูด้านข้าง (Sidebar - วิธีใช้งาน)
