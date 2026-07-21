@@ -60,43 +60,47 @@ def analyze_ingredients(extracted_text, df):
 # ==========================================
 # 5. หน้าจอหลัก (UI)
 # ==========================================
-# st.image("banner.png") # ถ้าออกแบบแบนเนอร์จาก Canva เสร็จแล้ว ให้นำภาพมาใส่โฟลเดอร์เดียวกับโค้ด แล้วลบเครื่องหมาย # บรรทัดนี้ออก
 st.title("🌿 SkinScan AI")
 st.markdown("**ระบบสแกนส่วนผสมเครื่องสำอางและสกินแคร์อัจฉริยะ**")
 
-uploaded_file = st.file_uploader("📸 อัปโหลดรูปภาพสลากด้านหลังผลิตภัณฑ์ (Ingredients)", type=['jpg', 'jpeg', 'png'])
+# --- เพิ่มระบบให้เลือก 2 แท็บ (ถ่ายรูปสด / อัปโหลดรูป) ---
+tab1, tab2 = st.tabs(["📸 ถ่ายรูปจากกล้อง", "📂 อัปโหลดรูปภาพ"])
 
-if uploaded_file is not None:
+with tab1:
+    camera_file = st.camera_input("ถ่ายรูปสลากผลิตภัณฑ์ให้ชัดเจน")
+with tab2:
+    uploaded_file = st.file_uploader("เลือกรูปภาพ...", type=['jpg', 'jpeg', 'png'])
+
+# ดึงไฟล์ภาพมาใช้ ไม่ว่าจะมาจากกล้องหรืออัปโหลด
+img_file = camera_file if camera_file is not None else uploaded_file
+
+if img_file is not None:
     # แบ่งหน้าจอเป็น 2 ฝั่ง (ซ้าย: รูป / ขวา: ผลลัพธ์)
     col_img, col_res = st.columns([1, 2])
     
     with col_img:
-        image = Image.open(uploaded_file)
-        st.image(image, caption='รูปภาพสลากที่อัปโหลด', use_container_width=True)
+        image = Image.open(img_file)
+        st.image(image, caption='ภาพสลากที่กำลังตรวจสอบ', use_container_width=True)
         
     with col_res:
         with st.spinner('🤖 AI กำลังปรับความคมชัดและกวาดสายตาอ่านข้อความ...'):
             try:
                 # --- พัฒนาระบบ AI ปรับแต่งภาพ (แก้ภาพเบลอ/สีกลืน) ---
-                # 1. แปลงขาวดำ
                 gray_img = image.convert('L')
-                # 2. ดันคอนทราสต์ให้จัด
                 enhancer_contrast = ImageEnhance.Contrast(gray_img)
                 img_contrast = enhancer_contrast.enhance(3.0)
-                # 3. เพิ่มความคมชัด (Sharpness) ให้ขอบตัวอักษร
                 enhancer_sharpness = ImageEnhance.Sharpness(img_contrast)
                 img_sharp = enhancer_sharpness.enhance(3.0)
-                # 4. บังคับแยกสีขาวดำ (Thresholding) ตัดนอยส์พื้นหลัง
                 processed_img = img_sharp.point(lambda x: 0 if x < 140 else 255, '1')
                 
                 with st.expander("👁️ ดูมุมมองภาพจำลองที่ AI ใช้สแกนข้อความ"):
-                    st.image(processed_img, caption='ภาพผ่านกระบวนการ Binarization & Enhancement', use_container_width=True)
+                    st.image(processed_img, caption='ภาพผ่านกระบวนการปรับสี', use_container_width=True)
 
                 # ดึงข้อความ
                 extracted_text = pytesseract.image_to_string(processed_img)
                 
                 if extracted_text.strip() == "":
-                    st.error("⚠️ ไม่พบตัวอักษร AI อ่านข้อความไม่ได้ แนะนำให้ถ่ายใหม่ในที่สว่างค่ะ")
+                    st.error("⚠️ ไม่พบตัวอักษร AI อ่านข้อความไม่ได้ แนะนำให้ถ่ายให้โฟกัสชัดเจนขึ้นค่ะ")
                 else:
                     result_df = analyze_ingredients(extracted_text, df_db)
                     
