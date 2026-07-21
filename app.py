@@ -10,38 +10,37 @@ import difflib
 # =========================================
 st.markdown("""
     <style>
-    /* ปรับพื้นหลังหลักให้เป็นสีเทานวลสะอาดตา อ่านง่ายสบายตาในทุกโหมด */
+    /* ตั้งค่ารูปภาพพื้นหลัง background.png ให้เรียงต่อกันสวยงาม */
     [data-testid="stAppViewContainer"] {
-        background-color: #f8f9fa;
+        background-image: url("background.png");
+        background-repeat: repeat;
+        background-size: 400px;
     }
     
     [data-testid="stHeader"] {
         background-color: transparent;
     }
     
-    /* บังคับให้ตัวหนังสือหลักเป็นสีเข้มคมชัด */
+    /* ทำกล่องข้อความและบล็อกต่างๆ ให้มีพื้นหลังขาวโปร่งแสง เพื่อให้อ่านตัวหนังสือได้ชัดเจน */
+    [data-testid="stVerticalBlock"] > div > div.element-container, 
+    div.stAlert, 
+    .streamlit-expanderHeader {
+        background-color: rgba(255, 255, 255, 0.90) !important;
+        border-radius: 12px;
+        padding: 10px;
+    }
+    
+    /* บังคับสีตัวหนังสือให้คมชัดบนพื้นหลัง */
     h1, h2, h3, h4, h5, h6, p, span, label {
         color: #2c3e50 !important;
     }
     
-    /* ตกแต่งกล่องข้อความอธิบาย (Info) ให้เด่นชัด ขอบมนสวยงาม */
-    div.stAlert {
-        background-color: #e3f2fd !important;
-        color: #0d47a1 !important;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        border: none;
-    }
-    div.stAlert p {
-        color: #0d47a1 !important;
-    }
-    
-    /* ตกแต่งปุ่มกดให้เป็นสีชมพูพาสเทลสกินแคร์ น่ารักสดใส */
+    /* ตกแต่งปุ่มกดสีชมพูพาสเทลเข้ากับธีม */
     .stButton>button {
         border-radius: 20px;
         font-weight: bold;
         border: none;
-        background-color: #ffb6c1;
+        background-color: #ff9eaa;
         color: white !important;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
@@ -49,16 +48,8 @@ st.markdown("""
     
     .stButton>button:hover {
         transform: translateY(-2px);
-        background-color: #ff9eaa;
+        background-color: #ff7f90;
         box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-    
-    /* ตกแต่งกล่อง Expander ผลลัพธ์ */
-    .streamlit-expanderHeader {
-        background-color: #ffffff;
-        border-radius: 8px;
-        font-weight: bold;
-        color: #2c3e50 !important;
     }
     </style>
     """, unsafe_allow_html=True)
