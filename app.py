@@ -11,16 +11,16 @@ import difflib
 st.set_page_config(page_title="SkinScan AI", page_icon="woman_5362023.png", layout="wide")
 
 # ==========================================
-# 2. โหลดฐานข้อมูล
+# 2. โหลดฐานข้อมูล (ปรับชื่อกลับเป็น database.csv ให้ตรงกับไฟล์จริง)
 # ==========================================
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('database_clean.csv')
+        df = pd.read_csv('database.csv')
         df['ingredient'] = df['ingredient'].astype(str).str.lower().str.strip()
         return df
     except FileNotFoundError:
-        st.error("❌ ไม่พบไฟล์ 'database_clean.csv' กรุณาตรวจสอบชื่อไฟล์ในระบบ")
+        st.error("❌ ไม่พบไฟล์ 'database.csv' กรุณาตรวจสอบชื่อไฟล์ในระบบ")
         return pd.DataFrame()
 
 df_db = load_data()
