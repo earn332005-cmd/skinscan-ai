@@ -12,7 +12,7 @@ import base64
 st.set_page_config(page_title="SkinScan AI", page_icon="woman_5362023.png", layout="wide")
 
 # ==========================================
-# 2. ฟังก์ชันแปลงรูปพื้นหลัง background.png ให้แสดงผลได้ 100%
+# 2. ฟังก์ชันแปลงรูปพื้นหลัง background.png 
 # ==========================================
 def set_bg_local(image_file):
     try:
@@ -20,16 +20,16 @@ def set_bg_local(image_file):
             encoded_string = base64.b64encode(f.read()).decode()
         css = f"""
         <style>
-        /* ตั้งค่าลายพื้นหลังสีชมพูลายเครื่องสำอาง */
+        /* ลายพื้นหลัง */
         .stApp {{
             background-image: url("data:image/png;base64,{encoded_string}");
             background-repeat: repeat;
             background-size: 350px;
         }}
         
-        /* ทำกล่องเนื้อหาหลักทั้งหมดให้เป็น "สีขาวทึบ" เพื่อให้อ่านง่ายและไม่ลายตา */
+        /* กล่องเนื้อหาหลัก */
         .main .block-container {{
-            background-color: #FFFFFF !important;
+            background-color: rgba(255, 255, 255, 0.95) !important;
             border-radius: 20px;
             padding: 2.5rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
@@ -37,18 +37,29 @@ def set_bg_local(image_file):
             margin-bottom: 2rem;
         }}
         
-        /* ทำกล่องย่อย/Expander ภายในให้เป็นสีขาวทึบเช่นกัน */
+        /* สีตัวหนังสือหลักให้เข้มสุดๆ */
+        h1, h2, h3, h4, h5, h6, p, span, label {{
+            color: #1a252f !important;
+        }}
+
+        /* 🌟 สร้างไฮไลต์ป้ายสีขาวรองรับตัวหนังสือบรรยาย (Caption/Small Text) ไม่ให้ลายตา 🌟 */
+        [data-testid="stCaptionContainer"], div[data-testid="caption"], small {{
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            padding: 4px 12px;
+            border-radius: 12px;
+            color: #1a252f !important;
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }}
+        
+        /* ตกแต่งกล่องย่อย */
         div.stExpander, div.stAlert {{
             background-color: #FFFFFF !important;
             border-radius: 12px;
         }}
-
-        /* บังคับสีตัวหนังสือให้เป็นสีเข้มเข้มคมชัด อ่านง่ายสบายตา */
-        h1, h2, h3, h4, h5, h6, p, span, label, div {{
-            color: #2c3e50 !important;
-        }}
         
-        /* ตกแต่งปุ่มกดสีชมพูพาสเทล */
+        /* ตกแต่งปุ่มกด */
         .stButton>button {{
             border-radius: 20px;
             font-weight: bold;
@@ -70,7 +81,6 @@ def set_bg_local(image_file):
     except FileNotFoundError:
         pass
 
-# เรียกใช้ฟังก์ชันใส่พื้นหลังด้วยไฟล์ background.png
 set_bg_local('background.png')
 
 # ==========================================
@@ -89,7 +99,7 @@ def load_data():
 df_db = load_data()
 
 # ==========================================
-# 4. ฟังก์ชันวิเคราะห์ส่วนผสม (พร้อมพิกัดไฮไลต์แม่นยำ)
+# 4. ฟังก์ชันวิเคราะห์ส่วนผสม 
 # ==========================================
 def analyze_ingredients_with_boxes(processed_img, df):
     data = pytesseract.image_to_data(processed_img, output_type=pytesseract.Output.DATAFRAME)
