@@ -107,13 +107,14 @@ def set_bg_local(image_file):
             background-color: #ff7f90 !important;
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }}
-        /* 🌟 สร้างพื้นหลังสีขาว กรอบมน และเงาให้รูปภาพโดดเด่น 🌟 */
-        [data-testid="stImage"] img {
+        
+        /* 🌟 สร้างพื้นหลังสีขาว กรอบมน และเงาให้รูปภาพโดดเด่น (แก้ปีกกาให้ถูกต้องแล้ว) 🌟 */
+        [data-testid="stImage"] img {{
             background-color: #ffffff !important;
             padding: 8px !important;
             border-radius: 16px !important;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-        }
+        }}
         </style>
         """
         st.markdown(css, unsafe_allow_html=True)
