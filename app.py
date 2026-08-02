@@ -37,26 +37,27 @@ def set_bg_local(image_file):
             margin-bottom: 2rem;
         }}
         
-        /* สีตัวหนังสือหลักให้เข้มสุดๆ */
-        h1, h2, h3, h4, h5, h6, p, span, label {{
-            color: #1a252f !important;
+        /* 🌟 บังคับสีตัวหนังสือทุกชนิดให้เป็นสีดำเข้มสนิท 🌟 */
+        h1, h2, h3, h4, h5, h6, p, span, label, div, small, li, a {{
+            color: #000000 !important; /* เปลี่ยนเป็นสีดำสนิท */
         }}
 
-        /* 🌟 สร้างไฮไลต์ป้ายสีขาวรองรับตัวหนังสือบรรยาย (Caption/Small Text) ไม่ให้ลายตา 🌟 */
-        [data-testid="stCaptionContainer"], div[data-testid="caption"], small {{
-            background-color: rgba(255, 255, 255, 0.9) !important;
-            padding: 4px 12px;
+        /* สร้างไฮไลต์ป้ายสีขาวรองรับตัวหนังสือบรรยาย (Caption/Small Text) */
+        [data-testid="stCaptionContainer"], div[data-testid="caption"], .st-emotion-cache-1n76uvr {{
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            padding: 6px 16px;
             border-radius: 12px;
-            color: #1a252f !important;
-            font-weight: bold;
+            color: #000000 !important; /* บังคับดำอีกรอบ */
+            font-weight: bold !important;
             display: inline-block;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }}
         
         /* ตกแต่งกล่องย่อย */
         div.stExpander, div.stAlert {{
             background-color: #FFFFFF !important;
             border-radius: 12px;
+            border: 1px solid #f0f0f0;
         }}
         
         /* ตกแต่งปุ่มกด */
@@ -64,15 +65,15 @@ def set_bg_local(image_file):
             border-radius: 20px;
             font-weight: bold;
             border: none;
-            background-color: #ff9eaa;
-            color: white !important;
+            background-color: #ff9eaa !important;
+            color: #000000 !important; /* เปลี่ยนตัวหนังสือบนปุ่มให้เป็นสีดำด้วย */
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
         }}
         
         .stButton>button:hover {{
             transform: translateY(-2px);
-            background-color: #ff7f90;
+            background-color: #ff7f90 !important;
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }}
         </style>
