@@ -42,7 +42,7 @@ def set_bg_local(image_file):
             color: #000000 !important;
         }}
 
-        /* 🌟 สร้างไฮไลต์ป้ายสีขาวให้ Caption */
+        /* สร้างไฮไลต์ป้ายสีขาวให้ Caption */
         [data-testid="stCaptionContainer"] {{
             background-color: rgba(255, 255, 255, 0.95) !important;
             padding: 6px 16px !important;
@@ -51,10 +51,30 @@ def set_bg_local(image_file):
             box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
         }}
         
-        /* 🌟 ปราบความดื้อ: บังคับทุกข้อความที่อยู่ใน Caption ให้เป็นสีดำสนิทและตัวหนา 🌟 */
+        /* บังคับทุกข้อความที่อยู่ใน Caption ให้เป็นสีดำ */
         [data-testid="stCaptionContainer"] * {{
             color: #000000 !important;
             font-weight: 800 !important; 
+        }}
+        
+        /* 🌟 ปราบ Dark Mode: บังคับกล่องอัปโหลดไฟล์ให้สว่างเสมอ 🌟 */
+        [data-testid="stFileUploadDropzone"] {{
+            background-color: #ffffff !important; /* พื้นหลังสีขาวเสมอ */
+            border: 2px dashed #ff9eaa !important; /* กรอบเส้นประสีชมพู */
+            border-radius: 12px !important;
+        }}
+        
+        /* บังคับตัวหนังสือในกล่องอัปโหลดให้เป็นสีดำ */
+        [data-testid="stFileUploadDropzone"] * {{
+            color: #000000 !important; 
+        }}
+        
+        /* ปรับปุ่ม Browse files ข้างในกล่องอัปโหลด */
+        [data-testid="stFileUploadDropzone"] button {{
+            background-color: #ffe4e1 !important; /* ปุ่มสีชมพูอ่อนพาสเทล */
+            color: #000000 !important;
+            font-weight: bold !important;
+            border: 1px solid #ff9eaa !important;
         }}
         
         /* ตกแต่งกล่องย่อย */
@@ -63,7 +83,7 @@ def set_bg_local(image_file):
             border-radius: 12px;
         }}
         
-        /* ตกแต่งปุ่มกด */
+        /* ตกแต่งปุ่มกดทั่วไป */
         .stButton>button {{
             border-radius: 20px;
             font-weight: bold;
