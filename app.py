@@ -220,7 +220,7 @@ def analyze_ingredients_with_boxes(processed_img, df):
 # ==========================================
 col_icon, col_title = st.columns([1, 9])
 with col_icon:
-    st.image("woman_5362023.png", width=120)
+    st.image("woman_5362023.png", width=95)
 with col_title:
     st.title("SkinScan AI")
 
