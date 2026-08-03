@@ -289,23 +289,39 @@ if img_file is not None:
             st.caption("🔴 กรอบสีแดงบนรูปภาพคือตำแหน่งที่ AI ตรวจพบสารตัวนี้ครับ")
 
         with col_res:
-            st.markdown("### 📋 ผลการวิเคราะห์แยกตามระดับความเสี่ยง")
+            st.markdown("### 🎯 ข้อมูลสารที่กำลังเลือก")
+            
+            # 1. ดึงข้อมูลของสารที่ผู้ใช้กำลังเลือกใน Dropdown มาแสดงเป็นไฮไลต์
+            target_row = result_df[result_df['Ingredient'] == selected_ingredient].iloc[0]
+            
+            # ใช้สีกล่องตามระดับความเสี่ยงเพื่อให้เห็นชัดเจน
+            if target_row['Risk'] == 'Safe':
+                st.success(f"**{target_row['Ingredient']}**\n\n**สถานะ:** 🟢 ปลอดภัย\n\n**คุณสมบัติ:** {target_row['Function']}")
+            elif target_row['Risk'] == 'Warning':
+                st.warning(f"**{target_row['Ingredient']}**\n\n**สถานะ:** 🟡 เฝ้าระวัง\n\n**คุณสมบัติ:** {target_row['Function']}")
+            else:
+                st.error(f"**{target_row['Ingredient']}**\n\n**สถานะ:** 🔴 อันตราย\n\n**คุณสมบัติ:** {target_row['Function']}")
+
+            st.markdown("---")
+            
+            # 2. แสดงลิสต์สารทั้งหมดตามปกติ (ปรับให้หุบไว้ก่อนจะได้ไม่เปลืองพื้นที่)
+            st.markdown("### 📋 สารทั้งหมดที่ตรวจพบ")
             
             safe_df = result_df[result_df['Risk'] == 'Safe']
             warn_df = result_df[result_df['Risk'] == 'Warning']
             danger_df = result_df[result_df['Risk'] == 'Danger']
             
-            with st.expander(f"🟢 ปลอดภัย ({len(safe_df)} ชนิด)", expanded=True):
+            with st.expander(f"🟢 ปลอดภัย ({len(safe_df)} ชนิด)", expanded=False):
                 for _, row in safe_df.iterrows():
                     highlight_mark = " 👉 (กำลังแสดงตำแหน่ง)" if row['Ingredient'] == selected_ingredient else ""
                     st.write(f"- **{row['Ingredient']}**{highlight_mark}<br><small>{row['Function']}</small>", unsafe_allow_html=True)
                     
-            with st.expander(f"🟡 เฝ้าระวัง ({len(warn_df)} ชนิด)", expanded=True):
+            with st.expander(f"🟡 เฝ้าระวัง ({len(warn_df)} ชนิด)", expanded=False):
                 for _, row in warn_df.iterrows():
                     highlight_mark = " 👉 (กำลังแสดงตำแหน่ง)" if row['Ingredient'] == selected_ingredient else ""
                     st.write(f"- **{row['Ingredient']}**{highlight_mark}<br><small>{row['Function']}</small>", unsafe_allow_html=True)
                     
-            with st.expander(f"🔴 อันตราย ({len(danger_df)} ชนิด)", expanded=True):
+            with st.expander(f"🔴 อันตราย ({len(danger_df)} ชนิด)", expanded=False):
                 for _, row in danger_df.iterrows():
                     highlight_mark = " 👉 (กำลังแสดงตำแหน่ง)" if row['Ingredient'] == selected_ingredient else ""
                     st.write(f"- **{row['Ingredient']}**{highlight_mark}<br><small>{row['Function']}</small>", unsafe_allow_html=True)
