@@ -37,8 +37,8 @@ def set_bg_local(image_file):
             margin-bottom: 2rem;
         }}
         
-        /* สีตัวหนังสือหลักให้ดำสนิท */
-        h1, h2, h3, h4, h5, h6, p, span, label {{
+        /* 🌟 แก้ไข: สีตัวหนังสือหลักให้ดำสนิท (ครอบคลุมทุกแท็ก) 🌟 */
+        h1, h2, h3, h4, h5, h6, p, span, label, li, small, strong, b {{
             color: #000000 !important;
         }}
 
@@ -55,7 +55,7 @@ def set_bg_local(image_file):
             font-weight: 800 !important; 
         }}
         
-        /* 🌟 ไม้ตายปราบ Dark Mode: บังคับกล่องอัปโหลดไฟล์ทุกคลาสให้สว่าง 100% 🌟 */
+        /* 🌟 ไม้ตายปราบ Dark Mode: บังคับกล่องอัปโหลดไฟล์ให้สว่าง 100% 🌟 */
         .stFileUploader, 
         .stFileUploader > div,
         [data-testid="stFileUploaderDropzone"],
@@ -92,6 +92,11 @@ def set_bg_local(image_file):
             border-radius: 12px;
         }}
         
+        /* 🌟 แก้ไข: บังคับตัวหนังสือในกล่องย่อยให้เป็นสีดำเสมอ 🌟 */
+        div.stExpander * {{
+            color: #000000 !important;
+        }}
+        
         /* ตกแต่งปุ่มกดทั่วไป */
         .stButton>button {{
             border-radius: 20px;
@@ -108,7 +113,7 @@ def set_bg_local(image_file):
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }}
         
-        /* 🌟 สร้างพื้นหลังสีขาว กรอบมน และเงาให้รูปภาพโดดเด่น (แก้ปีกกาให้ถูกต้องแล้ว) 🌟 */
+        /* 🌟 สร้างพื้นหลังสีขาว กรอบมน และเงาให้รูปภาพโดดเด่น 🌟 */
         [data-testid="stImage"] img {{
             background-color: #ffffff !important;
             padding: 8px !important;
